@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "roots": [
+    {
+      "id": "interpretability",
+      "name": "模型可解释性",
+      "label": "模型可解释性 / Model Interpretability",
+      "color": "#8d78af",
+      "subtopics": [
+        {
+          "id": "mechanistic",
+          "name": "机制可解释性",
+          "pattern": "mechanistic.interpret|sparse.autoencoder|activation.patch|causal.trac|neural.circuit|模型机制解释|机制可解释"
+        },
+        {
+          "id": "features",
+          "name": "特征与概念解释",
+          "pattern": "concept.bottleneck|concept.activation|feature.interpret|feature.visuali[sz]|monosemantic|特征解释|概念解释"
+        },
+        {
+          "id": "attribution",
+          "name": "归因与重要性分析",
+          "pattern": "feature.attribution|integrated.gradients|gradient.attribution|\\bshap\\b|saliency.map|特征归因|重要性分析"
+        },
+        {
+          "id": "methods",
+          "name": "可解释方法与模型",
+          "pattern": "explainable.ai|interpretable.model|post.hoc.explan|counterfactual.explan|可解释模型|反事实解释"
+        },
+        {
+          "id": "evaluation",
+          "name": "解释忠实性与评测",
+          "pattern": "explanation.faithful|faithful.explan|interpretability.benchmark|explanation.evaluation|解释忠实|解释评测"
+        },
+        {
+          "id": "general",
+          "name": "模型可解释性综合",
+          "pattern": "interpretability|interpretable|explainability|explainable|可解释性"
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "name": "智能体",
+      "label": "智能体 / Agents",
+      "color": "#7752ba",
+      "subtopics": [
+        {
+          "id": "planning",
+          "name": "规划与推理",
+          "pattern": "\\bagent(s|ic)?\\b|multi.agent|tool.use|tool.call|agent.*plan"
+        },
+        {
+          "id": "multiagent",
+          "name": "多智能体协作",
+          "pattern": "multi.agent|agent.*collabor|agent.*cooper"
+        },
+        {
+          "id": "memory",
+          "name": "记忆与运行框架",
+          "pattern": "agent.*(memory|runtime|harness|orchestrat)|agent operating|\\baios\\b"
+        },
+        {
+          "id": "agentsecurity",
+          "name": "智能体安全",
+          "pattern": "prompt.injection|agent.*(secur|safety|attack)|tool.poison"
+        },
+        {
+          "id": "detail-4",
+          "name": "代码与软件智能体",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:coding agent|code agent|agentic cod|software agent|software engineer|program repair|code generation)"
+        },
+        {
+          "id": "detail-5",
+          "name": "具身机器人与导航",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:robot|embodied|navigation|manipulation|autonomous driving)"
+        },
+        {
+          "id": "detail-6",
+          "name": "工具与浏览器智能体",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:tool.use|tool.call|browser agent|web agent|computer.use|gui agent|api agent)"
+        },
+        {
+          "id": "detail-7",
+          "name": "记忆与检索增强",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:agent.{0,20}memor|long.term memor|episodic memor|retrieval.augmented|\\brag\\b)"
+        },
+        {
+          "id": "detail-8",
+          "name": "规划、推理与决策",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:planning|reasoning|decision.making|task decomposition|long.horizon|problem.solving)"
+        },
+        {
+          "id": "detail-9",
+          "name": "科研与发现智能体",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:scientific discovery|research agent|agentic research|science agent|automated research|scientific agent)"
+        },
+        {
+          "id": "detail-10",
+          "name": "医疗与健康智能体",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:medical|clinical|healthcare|diagnosis|patient)"
+        },
+        {
+          "id": "detail-11",
+          "name": "教育与学习智能体",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:education|tutoring|student|teaching|pedagog)"
+        },
+        {
+          "id": "detail-12",
+          "name": "智能体评测与基准",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:benchmark|evaluation|evaluating|assessment|test suite)"
+        },
+        {
+          "id": "detail-13",
+          "name": "智能体学习与优化",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:reinforcement learning|self.evol|self.improv|agent training|policy optim|agent optim)"
+        },
+        {
+          "id": "detail-14",
+          "name": "运行框架与基础设施",
+          "pattern": "\\A(?=[\\s\\S]*(?:\\bagents?\\b|agentic))[\\s\\S]*(?:agent runtime|agent harness|agent operating system|agentos|\\baios\\b|orchestration|agent framework|agent infrastructure)"
+        },
+        {
+          "id": "detail-15",
+          "name": "智能体综合",
+          "pattern": "\\bagents?\\b|agentic"
+        }
+      ]
+    },
+    {
+      "id": "vision",
+      "name": "计算机视觉",
+      "label": "计算机视觉 / Vision",
+      "color": "#277da8",
+      "subtopics": [
+        {
+          "id": "detection",
+          "name": "目标检测与跟踪",
+          "pattern": "object.detect|open.vocabulary.detect|\\bdetr\\b|object.track"
+        },
+        {
+          "id": "segmentation",
+          "name": "图像分割",
+          "pattern": "segmentat|panoptic"
+        },
+        {
+          "id": "video",
+          "name": "视频理解",
+          "pattern": "\\bvideo\\b|action.recognition|temporal.ground"
+        },
+        {
+          "id": "3d",
+          "name": "三维视觉",
+          "pattern": "\\b3d\\b|point.cloud|neural.radiance|\\bnerf\\b|gaussian.splat|depth.estimat"
+        },
+        {
+          "id": "image",
+          "name": "图像识别与恢复",
+          "pattern": "image.classif|image.recogni|image.restor|super.resolution|denois|deblur"
+        },
+        {
+          "id": "remote",
+          "name": "遥感与农业视觉",
+          "pattern": "remote.sens|satellite|aerial|agricultur|crop.detect"
+        },
+        {
+          "id": "detail-6",
+          "name": "视频编辑",
+          "pattern": "video edit|video inpaint|video styliz|video style transfer|video object remov"
+        },
+        {
+          "id": "detail-7",
+          "name": "视频查找",
+          "pattern": "video retriev|text.to.video retriev|text.video retriev|video search|video moment retriev|moment locali[sz]|temporal ground|temporal sentence ground|video locali[sz]"
+        },
+        {
+          "id": "detail-8",
+          "name": "视频生成",
+          "pattern": "video generat|text.to.video|image.to.video|video synthes|video diffusion"
+        },
+        {
+          "id": "detail-9",
+          "name": "小目标与密集目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:small.object|tiny.object|dense.object|小目标|密集目标)"
+        },
+        {
+          "id": "detail-10",
+          "name": "旋转目标与定向检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:oriented|rotated|rotation|旋转|定向)"
+        },
+        {
+          "id": "detail-11",
+          "name": "开放词汇与开放世界检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:open.vocabulary|open.world|开放词汇|开放世界)"
+        },
+        {
+          "id": "detail-12",
+          "name": "少样本与零样本检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:few.shot|zero.shot|少样本|零样本)"
+        },
+        {
+          "id": "detail-13",
+          "name": "实时轻量化与边缘部署",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:real.time|lightweight|edge device|实时|轻量化)"
+        },
+        {
+          "id": "detail-14",
+          "name": "三维与多模态检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:3d|lidar|point.cloud|multimodal|多模态|三维)"
+        },
+        {
+          "id": "detail-15",
+          "name": "弱监督与半监督检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:weakly.supervised|semi.supervised|弱监督|半监督)"
+        },
+        {
+          "id": "detail-16",
+          "name": "鲁棒性与域适应",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:robust|domain.adapt|domain.general|鲁棒|域适应)"
+        },
+        {
+          "id": "detail-17",
+          "name": "遥感与航拍目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:remote.sensing|aerial|satellite|遥感|航拍)"
+        },
+        {
+          "id": "detail-18",
+          "name": "农业与生态目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:agricultur|crop|livestock|pest|农业|农作物|病虫害)"
+        },
+        {
+          "id": "detail-19",
+          "name": "交通与自动驾驶检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:autonomous.driv|traffic|pedestrian|自动驾驶|交通|行人)"
+        },
+        {
+          "id": "detail-20",
+          "name": "工业缺陷与质量检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:industrial|defect|surface inspection|工业|缺陷)"
+        },
+        {
+          "id": "detail-21",
+          "name": "安防与公共安全检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:surveillance|public.safety|安防|公共安全)"
+        },
+        {
+          "id": "detail-22",
+          "name": "海事与水下目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:maritime|underwater|ship.detect|海事|水下|船舶)"
+        },
+        {
+          "id": "detail-23",
+          "name": "军事场景目标检测与识别",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:military|defense|defence|战场|军事|国防)"
+        },
+        {
+          "id": "detail-24",
+          "name": "低空无人机与反无人机检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:counter.uav|anti.drone|drone.detect|低空|反无人机)"
+        },
+        {
+          "id": "detail-25",
+          "name": "红外与低光照目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:infrared|thermal|low.light|红外|低光照)"
+        },
+        {
+          "id": "detail-26",
+          "name": "SAR 雷达目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:\\bsar\\b|synthetic.aperture.radar|radar.target|合成孔径|雷达)"
+        },
+        {
+          "id": "detail-27",
+          "name": "伪装与遮挡目标检测",
+          "pattern": "\\A(?=[\\s\\S]*(?:object.detect|target.detect|目标检测))[\\s\\S]*(?:camouflag|occlud|伪装|遮挡)"
+        },
+        {
+          "id": "detail-28",
+          "name": "目标检测综合",
+          "pattern": "object.detect|target.detect|目标检测"
+        },
+        {
+          "id": "flow",
+          "name": "光流与运动估计",
+          "pattern": "optical.flow|motion.estimat|frame.interpolat|scene.flow"
+        },
+        {
+          "id": "depth",
+          "name": "深度、立体与表面重建",
+          "pattern": "\\bdepth\\b|stereo|disparity|surface.reconstruct|monocular|multi.view"
+        },
+        {
+          "id": "pose",
+          "name": "人体、姿态与动作建模",
+          "pattern": "pose.estimat|human.pose|human.motion|human.image|human.body|avatar|action.synth"
+        },
+        {
+          "id": "quality",
+          "name": "图像质量与低层视觉",
+          "pattern": "image.quality|exposure|low.light|image.enhanc|image.completion|image.inpaint|image.edit|image.color|image.fusion|degradation.aware"
+        },
+        {
+          "id": "events",
+          "name": "事件相机与新型视觉传感",
+          "pattern": "event.camera|event.based.vision|neuromorphic.vision"
+        },
+        {
+          "id": "textvision",
+          "name": "场景文字与文档视觉",
+          "pattern": "scene.text|text.recognition|\\bocr\\b|document.image|document.understand"
+        },
+        {
+          "id": "sam",
+          "name": "通用分割与视觉基础模型",
+          "pattern": "segment.anything|\\b(?:sam|sam2|sam3)\\b|vision.foundation|visual.foundation"
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "name": "语言模型与自然语言",
+      "label": "语言模型与自然语言 / Language",
+      "color": "#527fb0",
+      "subtopics": [
+        {
+          "id": "llm",
+          "name": "大语言模型",
+          "pattern": "large.language|\\bllms?\\b|language.model"
+        },
+        {
+          "id": "reasoning",
+          "name": "推理与数学",
+          "pattern": "chain.of.thought|reasoning|mathematical|theorem.prov"
+        },
+        {
+          "id": "retrieval",
+          "name": "检索增强与知识",
+          "pattern": "retrieval.augment|\\brag\\b|knowledge.graph|knowledge.edit"
+        },
+        {
+          "id": "code",
+          "name": "代码与程序",
+          "pattern": "code.generat|program.synth|code.language|software.engineer"
+        },
+        {
+          "id": "translation",
+          "name": "机器翻译与跨语言迁移",
+          "pattern": "machine.translat|\\btranslation\\b|cross.lingual|multilingual|low.resource.language"
+        },
+        {
+          "id": "dialogue",
+          "name": "对话、问答与交互",
+          "pattern": "\\bdialogue\\b|\\bdialog\\b|chatbot|question.answer|conversational"
+        },
+        {
+          "id": "texttasks",
+          "name": "文本理解、生成与摘要",
+          "pattern": "natural.language.understand|text.classif|text.generat|text.summar|summarization|sentiment|textual.entail"
+        },
+        {
+          "id": "linguistics",
+          "name": "语言结构与语言学",
+          "pattern": "linguistic|syntactic|syntax|parsing|morpholog|phonolog|dialect|word.segment"
+        },
+        {
+          "id": "information",
+          "name": "信息抽取与事件建模",
+          "pattern": "information.extract|relation.extract|entity.recogn|named.entity|event.extract|event.detect"
+        },
+        {
+          "id": "context",
+          "name": "上下文建模与长序列",
+          "pattern": "long.context|context.window|context.length|long.sequence|context.compress"
+        }
+      ]
+    },
+    {
+      "id": "multimodal",
+      "name": "多模态",
+      "label": "多模态 / Multimodal",
+      "color": "#8d65ac",
+      "subtopics": [
+        {
+          "id": "vlm",
+          "name": "视觉语言模型",
+          "pattern": "vision.language|visual.language|\\bvlms?\\b|multimodal|multi.modal"
+        },
+        {
+          "id": "audio",
+          "name": "音频与语音",
+          "pattern": "\\baudio\\b|\\bspeech\\b|sound.event"
+        },
+        {
+          "id": "alignment",
+          "name": "跨模态对齐",
+          "pattern": "cross.modal|text.image|image.text|text.video|video.text"
+        }
+      ]
+    },
+    {
+      "id": "generation",
+      "name": "生成模型",
+      "label": "生成模型 / Generative Models",
+      "color": "#a16aa8",
+      "subtopics": [
+        {
+          "id": "diffusion",
+          "name": "扩散与流模型",
+          "pattern": "diffusion|flow.match|rectified.flow"
+        },
+        {
+          "id": "visualgen",
+          "name": "图像与视频生成",
+          "pattern": "image.generat|video.generat|text.to.image|text.to.video"
+        },
+        {
+          "id": "generative",
+          "name": "其他生成建模",
+          "pattern": "generative|variational.autoencoder|\\bgans?\\b"
+        },
+        {
+          "id": "flowmodels",
+          "name": "流模型与能量模型",
+          "pattern": "\\bflows?\\b|flow.based|energy.based|energy.match|normalizing.flow"
+        },
+        {
+          "id": "editing",
+          "name": "生成式编辑与个性化",
+          "pattern": "personalization|personalisation|image.edit|image.completion|generative.edit|inversion.free"
+        }
+      ]
+    },
+    {
+      "id": "rl",
+      "name": "强化学习",
+      "label": "强化学习 / Reinforcement Learning",
+      "color": "#b67920",
+      "subtopics": [
+        {
+          "id": "policy",
+          "name": "策略学习",
+          "pattern": "reinforcement.learning|policy.optim|policy.gradient|actor.critic"
+        },
+        {
+          "id": "offline",
+          "name": "离线与模仿学习",
+          "pattern": "offline.rl|offline.reinforcement|imitation.learning|learning.from.demonstration"
+        },
+        {
+          "id": "mdp",
+          "name": "马尔可夫决策过程",
+          "pattern": "markov.decision|\\bmdps?\\b"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "name": "学习方法",
+      "label": "学习方法 / Learning",
+      "color": "#a58a43",
+      "subtopics": [
+        {
+          "id": "selfsupervised",
+          "name": "自监督与表示学习",
+          "pattern": "self.supervis|contrastive.learning|representation.learning"
+        },
+        {
+          "id": "adaptation",
+          "name": "迁移与泛化",
+          "pattern": "domain.adapt|domain.general|out.of.distribution|transfer.learning|test.time.adapt"
+        },
+        {
+          "id": "continual",
+          "name": "持续与小样本学习",
+          "pattern": "continual.learning|lifelong|few.shot|zero.shot|meta.learning"
+        },
+        {
+          "id": "federated",
+          "name": "联邦与分布式学习",
+          "pattern": "federated|distributed.learning|decentralized.learning"
+        },
+        {
+          "id": "forgetting",
+          "name": "遗忘、增量与持续适应",
+          "pattern": "catastrophic.forget|forgetting|incremental.learn|continuous.adapt"
+        },
+        {
+          "id": "hyperparameters",
+          "name": "超参数、集成与模型选择",
+          "pattern": "hyperparameter|\\bensemble|model.selection|neural.architecture.search"
+        },
+        {
+          "id": "loss",
+          "name": "训练目标与优化策略",
+          "pattern": "loss.function|load.balanc|soft.label|training.dynamic|initialization|self.distill|regulariz"
+        },
+        {
+          "id": "active",
+          "name": "主动学习与样本选择",
+          "pattern": "active.learn|curriculum.learn|data.scarcity|sample.select|label.efficien"
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "name": "软件工程",
+      "label": "软件工程 / Software Engineering",
+      "color": "#547e93",
+      "subtopics": [
+        {
+          "id": "testing",
+          "name": "软件测试与分析",
+          "pattern": "software.test|unit.test|test.generat|fuzz|static.analys|dynamic.analys|program.analys|symbolic.execut"
+        },
+        {
+          "id": "repair",
+          "name": "程序修复与调试",
+          "pattern": "program.repair|bug.fix|automated.repair|debugg|patch.generat|vulnerability.repair"
+        },
+        {
+          "id": "code",
+          "name": "代码生成与理解",
+          "pattern": "code.generat|code.complet|code.summar|code.understand|program.synth|software.engineer|repository.level"
+        },
+        {
+          "id": "general",
+          "name": "软件工程综合",
+          "pattern": "(?!)"
+        },
+        {
+          "id": "maintenance",
+          "name": "软件维护与演化",
+          "pattern": "software.maint|software.evol|refactor|technical.debt|code.review|pull.request|software.requirement|software.architect"
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "name": "安全",
+      "label": "安全 / Security",
+      "color": "#c42f75",
+      "subtopics": [
+        {
+          "id": "security",
+          "name": "攻击与防御",
+          "pattern": "adversarial|backdoor|jailbreak|prompt.injection|poison|watermark|cybersecurity|cyber.security|vulnerabilit|malware|intrusion.detect|agent.*secur|llm.*secur"
+        },
+        {
+          "id": "alignment",
+          "name": "对齐与安全",
+          "pattern": "\\balignment\\b|\\bsafety\\b|\\brlhf\\b|preference.optim"
+        },
+        {
+          "id": "privacy",
+          "name": "隐私与公平",
+          "pattern": "\\bprivacy\\b|differentially.private|\\bfairness\\b|unlearning"
+        },
+        {
+          "id": "explain",
+          "name": "可解释性与可靠性",
+          "pattern": "interpretabil|explainabil|uncertainty|calibration|hallucinat"
+        },
+        {
+          "id": "detail-4",
+          "name": "记忆与 RAG 投毒",
+          "pattern": "memory poison|memory injection|retrieval.{0,20}poison|rag.{0,20}(attack|poison)"
+        },
+        {
+          "id": "detail-5",
+          "name": "工具、MCP 与权限安全",
+          "pattern": "tool poison|tool.{0,20}(hijack|permission|security)|mcp.{0,20}(secur|attack|poison)|privilege escalation|agent.{0,20}sandbox|malicious.{0,15}(skill|tool)"
+        },
+        {
+          "id": "detail-6",
+          "name": "多智能体安全",
+          "pattern": "multi.agent.{0,35}(secur|safety|attack|adversar|collusion)|agent.{0,20}collusion"
+        },
+        {
+          "id": "detail-7",
+          "name": "隐私与数据泄露",
+          "pattern": "data exfiltration|privacy.{0,20}(leak|attack|protect)|membership inference|memorization.{0,20}(privacy|extract)|memory extraction"
+        },
+        {
+          "id": "detail-8",
+          "name": "提示注入与间接注入",
+          "pattern": "prompt injection|indirect injection|instruction hijack"
+        },
+        {
+          "id": "detail-9",
+          "name": "越狱与有害内容",
+          "pattern": "jailbreak|harmful (request|instruction|content)|refusal.{0,20}(bypass|attack)"
+        },
+        {
+          "id": "detail-10",
+          "name": "对齐、欺骗与可控性",
+          "pattern": "ai alignment|safety alignment|misalignment|deceptive alignment|reward hacking|scheming|corrigibility|ai control|agentic.{0,20}deception"
+        },
+        {
+          "id": "detail-11",
+          "name": "鲁棒性与后门",
+          "pattern": "adversarial (robustness|example|attack)|backdoor.{0,25}(llm|language model|agent)|model.{0,20}backdoor"
+        },
+        {
+          "id": "detail-12",
+          "name": "安全评测与红队",
+          "pattern": "safety (benchmark|evaluation)|security (benchmark|evaluation)|red.team|agent security bench|safepro|agentdojo|injecagent"
+        },
+        {
+          "id": "detail-13",
+          "name": "防御、护栏与监控",
+          "pattern": "guardrail|prompt injection defense|safety monitor|security monitor|safety guard|constitutional ai"
+        },
+        {
+          "id": "detail-14",
+          "name": "AI 安全综合",
+          "pattern": "ai safety|ai security|llm safety|llm security|agent safety|agent security|language model.{0,15}safety"
+        }
+      ]
+    },
+    {
+      "id": "efficiency",
+      "name": "高效模型与系统",
+      "label": "高效模型与系统 / Efficient AI",
+      "color": "#6d987c",
+      "subtopics": [
+        {
+          "id": "compression",
+          "name": "剪枝、量化与压缩",
+          "pattern": "\\bprun|quantiz|\\bspars|model.compress|distillat"
+        },
+        {
+          "id": "inference",
+          "name": "推理加速与部署",
+          "pattern": "inference.*(efficien|acceler|serving)|kv.cache|speculative.decod|model.serving"
+        },
+        {
+          "id": "training",
+          "name": "高效训练与适配",
+          "pattern": "parameter.efficient|\\blora\\b|low.rank.adapt|efficient.train|training.efficien"
+        }
+      ]
+    },
+    {
+      "id": "graphs",
+      "name": "图学习与结构数据",
+      "label": "图学习与结构数据 / Graphs",
+      "color": "#498f99",
+      "subtopics": [
+        {
+          "id": "gnn",
+          "name": "图神经网络",
+          "pattern": "graph.neural|graph.transformer|graph.learning"
+        },
+        {
+          "id": "timeseries",
+          "name": "时间序列与预测",
+          "pattern": "time.series|forecast|spatio.temporal"
+        },
+        {
+          "id": "recommendation",
+          "name": "推荐与排序",
+          "pattern": "recommendation|recommender|learning.to.rank"
+        },
+        {
+          "id": "graphgeneral",
+          "name": "图结构建模与图挖掘",
+          "pattern": "\\bgraphs?\\b|graphical.model|subgraph|homophily"
+        },
+        {
+          "id": "tabular",
+          "name": "表格数据与结构化预测",
+          "pattern": "\\btabular\\b|tabular.data|structured.data|tabpack"
+        },
+        {
+          "id": "anomaly",
+          "name": "异常检测与分布漂移",
+          "pattern": "anomaly.detect|outlier.detect|distribution.shift|concept.drift|change.point"
+        }
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "机器人与具身智能",
+      "label": "机器人与具身智能 / Robotics",
+      "color": "#6c85a8",
+      "subtopics": [
+        {
+          "id": "embodied",
+          "name": "具身与机器人学习",
+          "pattern": "robot|embodied|manipulation|loco.motion|locomotion"
+        },
+        {
+          "id": "navigation",
+          "name": "导航与自动驾驶",
+          "pattern": "navigation|autonomous.driv|motion.plan|trajectory.plan"
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "name": "科学与领域应用",
+      "label": "科学与领域应用 / AI for Science",
+      "color": "#7e9c73",
+      "subtopics": [
+        {
+          "id": "bio",
+          "name": "生物与分子",
+          "pattern": "protein|molecul|drug.discover|genomic"
+        },
+        {
+          "id": "medical",
+          "name": "医疗健康",
+          "pattern": "medical|clinical|healthcare|diagnosis"
+        },
+        {
+          "id": "physical",
+          "name": "物理与科学计算",
+          "pattern": "physics|partial.differential|scientific.discover"
+        },
+        {
+          "id": "engineering",
+          "name": "工程设计与科学仿真",
+          "pattern": "engineering.design|scientific.comput|scientific.simul|\\bpde\\b|helmholtz|neural.solver|multigrid"
+        },
+        {
+          "id": "neuroscience",
+          "name": "神经科学与认知建模",
+          "pattern": "neural.activity|\\bbrains?\\b|cognitive.simul|neuroscience|neural.population"
+        }
+      ]
+    },
+    {
+      "id": "theory",
+      "name": "理论与优化",
+      "label": "理论与优化 / Theory",
+      "color": "#927eaa",
+      "subtopics": [
+        {
+          "id": "optimization",
+          "name": "优化与收敛",
+          "pattern": "gradient.descent|convergence|convex|stochastic.optim|nonconvex"
+        },
+        {
+          "id": "statistics",
+          "name": "统计与学习理论",
+          "pattern": "learning.theory|generalization.bound|sample.complexity|minimax|statistical.inference"
+        },
+        {
+          "id": "causal",
+          "name": "因果推断",
+          "pattern": "causal|causality|counterfactual"
+        },
+        {
+          "id": "bayesian",
+          "name": "贝叶斯与概率建模",
+          "pattern": "\\bbayesian\\b|\\bgaussian\\b|probabilistic|posterior|\\bmcmc\\b|monte.carlo"
+        },
+        {
+          "id": "geometry",
+          "name": "几何、流形与最优传输",
+          "pattern": "\\briemannian\\b|\\bmanifold\\b|optimal.transport|entropic.transport|\\bwasserstein\\b"
+        },
+        {
+          "id": "complexity",
+          "name": "可学习性与计算复杂度",
+          "pattern": "\\bpac.learning|sample.compress|sample.complexity|lower.bound|single.index|multi.index|parit(?:y|ies)|kruskal|\\bcomplexity\\b"
+        },
+        {
+          "id": "information",
+          "name": "信息论与概率界",
+          "pattern": "information.theory|mutual.information|entropy|probability.bound|\\bconformal\\b|\\bfdr\\b"
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "name": "数据与评测",
+      "label": "数据与评测 / Data & Evaluation",
+      "color": "#ad8961",
+      "subtopics": [
+        {
+          "id": "benchmarks",
+          "name": "数据集与基准",
+          "pattern": "\\bbenchmark|\\bdataset|evaluation.framework"
+        },
+        {
+          "id": "data",
+          "name": "数据质量与合成",
+          "pattern": "data.curat|data.quality|synthetic.data|data.selection"
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "模型结构与神经计算",
+      "label": "模型结构与神经计算 / Model Architectures",
+      "color": "#8880b4",
+      "subtopics": [
+        {
+          "id": "transformers",
+          "name": "Transformer 与注意力",
+          "pattern": "\\btransformers?\\b|\\battention\\b|\\bqkv\\b"
+        },
+        {
+          "id": "ssm",
+          "name": "状态空间模型与 Mamba",
+          "pattern": "\\bmamba\\b|state.space.model|\\bssms?\\b|linear.recurren"
+        },
+        {
+          "id": "moe",
+          "name": "混合专家模型",
+          "pattern": "mixture.of.experts?|\\bmoe\\b|expert.routing|expert.skipping"
+        },
+        {
+          "id": "spiking",
+          "name": "脉冲与生物启发神经网络",
+          "pattern": "spiking.neural|spiking.network|neuromorphic|neural.activity|brain.inspired"
+        },
+        {
+          "id": "neural",
+          "name": "神经网络结构与表示能力",
+          "pattern": "neural.network|neural.architect|network.architect|expressivity|universal.approximation|latent.dimension"
+        },
+        {
+          "id": "normalization",
+          "name": "归一化与模型参数化",
+          "pattern": "normalization|parametrization|parameterization|\\bqkv\\b|model.merging|model.merge"
+        }
+      ]
+    },
+    {
+      "id": "planning",
+      "name": "决策、规划与博弈",
+      "label": "决策、规划与博弈 / Planning and Games",
+      "color": "#b09161",
+      "subtopics": [
+        {
+          "id": "search",
+          "name": "搜索与组合优化",
+          "pattern": "local.search|combinatorial.optim|\\bsat.solv|constraint.satisf|integer.program|heuristic.search"
+        },
+        {
+          "id": "planning",
+          "name": "经典规划与时序约束",
+          "pattern": "\\bplanning\\b|\\bhtn\\b|temporal.specification|temporal.logic|reward.monitor"
+        },
+        {
+          "id": "games",
+          "name": "博弈、谈判与机制设计",
+          "pattern": "\\bgames?\\b|\\bbandits?\\b|negotiation|mechanism.design|opponent.model|auction"
+        },
+        {
+          "id": "decision",
+          "name": "偏好建模与决策理论",
+          "pattern": "preference.learning|preference.model|decision.theory|social.choice|voting|mallows"
+        }
+      ]
+    },
+    {
+      "id": "world-models",
+      "name": "世界模型",
+      "label": "世界模型 / World Models",
+      "color": "#547f9d",
+      "legacyIds": [
+        "f57bf477-2929-4f04-bf25-d5e8c06cb710",
+        "rl:world"
+      ],
+      "subtopics": [
+        {
+          "id": "general",
+          "name": "世界模型基础与架构",
+          "pattern": "world.models?|世界模型"
+        },
+        {
+          "id": "dynamics",
+          "name": "潜在动力学与环境建模",
+          "pattern": "latent.dynamics|environment.model|learned.dynamics|dynamics.model|model.based.rl|model.based.reinforcement|dreamer|rssm"
+        },
+        {
+          "id": "video",
+          "name": "视频预测与交互式世界",
+          "pattern": "video.predict|interactive.world|world.simulat|generative.world|action.conditioned.video"
+        },
+        {
+          "id": "planning",
+          "name": "世界模型与具身规划",
+          "pattern": "\\A(?=[\\s\\S]*(?:world.model|世界模型))[\\s\\S]*(?:embodied|robot|planning|autonomous.driv|具身|规划)"
+        },
+        {
+          "id": "evaluation",
+          "name": "世界模型训练与评测",
+          "pattern": "\\A(?=[\\s\\S]*(?:world.model|世界模型))[\\s\\S]*(?:train|evaluat|benchmark|consisten|训练|评测)"
+        }
+      ]
+    },
+    {
+      "id": "blockchain",
+      "name": "区块链",
+      "label": "区块链 / Blockchain",
+      "color": "#538d9d",
+      "subtopics": [
+        {
+          "id": "consensus",
+          "name": "共识机制与分布式账本",
+          "pattern": "blockchain.*consensus|consensus.*blockchain|byzantine.fault.toleran|proof.of.stake|proof.of.work|distributed.ledger|区块链共识|分布式账本"
+        },
+        {
+          "id": "contracts",
+          "name": "智能合约与安全",
+          "pattern": "smart.contract|solidity|智能合约"
+        },
+        {
+          "id": "privacy",
+          "name": "区块链隐私与零知识证明",
+          "pattern": "zero.knowledge|zk.snark|zk.stark|blockchain.*privacy|privacy.*blockchain|零知识证明|区块链隐私"
+        },
+        {
+          "id": "scaling",
+          "name": "区块链扩容与跨链",
+          "pattern": "blockchain.*scalab|blockchain.*sharding|cross.chain|optimistic.rollup|zk.rollup|layer.2.*blockchain|区块链扩容|跨链"
+        },
+        {
+          "id": "ai",
+          "name": "区块链与人工智能",
+          "pattern": "blockchain.*(?:agent|artificial.intelligence|machine.learning|federated.learning)|(?:agent|artificial.intelligence|machine.learning|federated.learning).*blockchain|去中心化人工智能|区块链.*智能"
+        },
+        {
+          "id": "applications",
+          "name": "区块链应用与去中心化金融",
+          "pattern": "decentralized.finance|decentralised.finance|blockchain.*application|blockchain.*supply.chain|去中心化金融|区块链应用"
+        },
+        {
+          "id": "general",
+          "name": "区块链基础与综合",
+          "pattern": "blockchain|block.chain|distributed.ledger|区块链"
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "待分类",
+      "label": "待分类 / Other",
+      "color": "#438a73",
+      "subtopics": [
+        {
+          "id": "unclassified",
+          "name": "待细分",
+          "pattern": "(?!)"
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "Agent": "智能体综合",
+    "Agent OS": "运行框架与基础设施",
+    "Agent Harness": "运行框架与基础设施",
+    "Agent Security": "AI 安全综合",
+    "AI Safety": "AI 安全综合",
+    "Object Detection": "目标检测综合",
+    "Video Generation": "视频生成",
+    "Video Understanding": "视频理解",
+    "Video Editing": "视频编辑",
+    "Video Retrieval": "视频查找",
+    "强化学习": "策略学习",
+    "丁霄汉 · 剪枝": "剪枝、量化与压缩"
+  }
+}

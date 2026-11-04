@@ -1,0 +1,13 @@
+[
+ {"name":"记忆与 RAG 投毒","pattern":"memory poison|memory injection|retrieval.{0,20}poison|rag.{0,20}(attack|poison)","question":"不可信内容能否进入长期记忆，并持续影响后续行动？"},
+ {"name":"工具、MCP 与权限安全","pattern":"tool poison|tool.{0,20}(hijack|permission|security)|mcp.{0,20}(secur|attack|poison)|privilege escalation|agent.{0,20}sandbox|malicious.{0,15}(skill|tool)","question":"工具调用是否跨越了权限或信任边界？"},
+ {"name":"多智能体安全","pattern":"multi.agent.{0,35}(secur|safety|attack|adversar|collusion)|agent.{0,20}collusion","question":"攻击会不会沿着智能体之间的通信传播？"},
+ {"name":"隐私与数据泄露","pattern":"data exfiltration|privacy.{0,20}(leak|attack|protect)|membership inference|memorization.{0,20}(privacy|extract)|memory extraction","question":"哪些信息可能从模型、记忆或工具链中泄露？"},
+ {"name":"提示注入与间接注入","pattern":"prompt injection|indirect injection|instruction hijack","question":"外部数据是在哪一步被当成了可执行指令？"},
+ {"name":"越狱与有害内容","pattern":"jailbreak|harmful (request|instruction|content)|refusal.{0,20}(bypass|attack)","question":"模型的拒绝边界在什么条件下失效？"},
+ {"name":"对齐、欺骗与可控性","pattern":"ai alignment|safety alignment|misalignment|deceptive alignment|reward hacking|scheming|corrigibility|ai control|agentic.{0,20}deception","question":"目标、奖励与实际行为之间存在什么偏差？"},
+ {"name":"鲁棒性与后门","pattern":"adversarial (robustness|example|attack)|backdoor.{0,25}(llm|language model|agent)|model.{0,20}backdoor","question":"输入扰动或隐藏触发器会如何改变模型行为？"},
+ {"name":"安全评测与红队","pattern":"safety (benchmark|evaluation)|security (benchmark|evaluation)|red.team|agent security bench|safepro|agentdojo|injecagent","question":"评测区分了攻击成功、正常任务失败和执行错误吗？"},
+ {"name":"防御、护栏与监控","pattern":"guardrail|prompt injection defense|safety monitor|security monitor|safety guard|constitutional ai","question":"防御降低风险时，会不会同时损害正常任务能力？"},
+ {"name":"AI 安全综合","pattern":"ai safety|ai security|llm safety|llm security|agent safety|agent security|language model.{0,15}safety","question":"这项研究关注哪类风险，证据来自什么场景？"}
+]

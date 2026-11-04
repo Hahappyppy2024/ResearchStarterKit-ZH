@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Preserve upstream PDF.js byte content; its generated bootstrap uses trailing spaces.
+sites/mist-blue-lotus/app/web/vendor/** -whitespace

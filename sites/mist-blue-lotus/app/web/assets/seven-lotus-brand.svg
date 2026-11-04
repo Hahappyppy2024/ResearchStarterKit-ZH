@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 106" fill="none">
+<defs>
+ <linearGradient id="petal" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#fafcff"/><stop offset=".52" stop-color="#e2ddec"/><stop offset="1" stop-color="#8db8d1"/></linearGradient>
+ <linearGradient id="pink" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#fffaff"/><stop offset=".5" stop-color="#ecdce9"/><stop offset="1" stop-color="#b8b9d8"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8ebe3"/><stop offset="1" stop-color="#98bbbd"/></linearGradient>
+ <path id="p" d="M0 0C-10-6-10-18 0-29C10-18 10-6 0 0Z"/>
+ <g id="bloom" stroke="#94b5c9" stroke-width=".65" stroke-linejoin="round">
+  <use href="#p" transform="rotate(-74) scale(.8)" fill="url(#petal)"/><use href="#p" transform="rotate(74) scale(.8)" fill="url(#petal)"/>
+  <use href="#p" transform="rotate(-49) scale(.92)" fill="url(#petal)"/><use href="#p" transform="rotate(49) scale(.92)" fill="url(#petal)"/>
+  <use href="#p" transform="rotate(-25)" fill="url(#pink)"/><use href="#p" transform="rotate(25)" fill="url(#pink)"/>
+  <use href="#p" fill="url(#petal)"/><path d="M-15-3Q0 10 15-3Q0 2-15-3Z" fill="url(#pink)"/><path d="M-5 1Q0 3 5 1" stroke="#c9b97f"/>
+ </g>
+ <g id="half" stroke="#95b4c6" stroke-width=".7"><use href="#p" transform="rotate(-23) scale(.7)" fill="url(#pink)"/><use href="#p" transform="rotate(23) scale(.7)" fill="url(#pink)"/><use href="#p" transform="scale(.7 .9)" fill="url(#petal)"/></g>
+ <g id="bud" stroke="#98b9ca" stroke-width=".7"><path d="M0 0C-10-7-5-20 0-27C6-19 11-7 0 0Z" fill="url(#pink)"/><path d="M0 0Q-4-10 0-24M0 0Q5-10 0-24"/><path d="M-6-5L0 1 6-5" stroke="#8dafac"/></g>
+</defs>
+<!-- Seven individual lotus blossoms, each at a different height and stage. -->
+<g stroke="#99b9b8" stroke-width="1.1" stroke-linecap="round"><path d="M15 86Q12 70 15 56M40 84Q36 56 38 35M65 88Q62 76 64 65M93 86Q91 54 91 42M121 88Q125 77 123 66M151 87Q146 56 151 36M177 88Q181 77 177 69"/></g>
+<g opacity=".85" fill="url(#leaf)" stroke="#a9c8c9" stroke-width=".65"><path d="M4 88Q23 66 43 85Q26 99 4 88Z"/><path d="M58 91Q80 74 102 88Q84 102 58 91Z"/><path d="M118 91Q140 74 163 88Q146 102 118 91Z"/><path d="M157 91Q179 76 193 90Q175 101 157 91Z"/></g>
+<use href="#bud" transform="translate(15 56) scale(.57)"/>
+<use href="#bud" transform="translate(38 35) scale(.72)"/>
+<use href="#half" transform="translate(64 65) scale(.8)"/>
+<use href="#half" transform="translate(91 42) scale(1)"/>
+<use href="#bloom" transform="translate(123 66) scale(.7)"/>
+<use href="#bloom" transform="translate(151 36) scale(.83)"/>
+<use href="#bloom" transform="translate(177 69) scale(.94)"/>
+<path d="M14 100Q92 105 184 99" stroke="#b8d7e6" stroke-width=".8" opacity=".7"/>
+</svg>

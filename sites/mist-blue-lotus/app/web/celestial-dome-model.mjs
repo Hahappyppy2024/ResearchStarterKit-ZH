@@ -1,0 +1,3 @@
+const hash=value=>{let h=2166136261;for(const c of String(value))h=Math.imul(h^c.charCodeAt(0),16777619);return (h>>>0)/4294967296;};
+export function domePoints(points){return points.map(p=>{const id=p.paper.id;return {...p,x:p.x*1.18+(hash(id+'x')-.5)*24,y:(hash(id+'height')-.5)*78+Math.sin(Math.atan2(p.z,p.x)*2)*22,z:p.z*1.18+(hash(id+'z')-.5)*24};});}
+export function projectDomePoint(p,{width,height,yaw,pitch}){const x=p.x*Math.cos(yaw)-p.z*Math.sin(yaw),z=p.x*Math.sin(yaw)+p.z*Math.cos(yaw),y=p.y*Math.cos(pitch)-z*Math.sin(pitch),depth=p.y*Math.sin(pitch)+z*Math.cos(pitch),perspective=1050/(1050+depth),scale=Math.min(width/860,height/570);return {...p,sx:width*.5+x*scale*perspective,sy:height*.5+y*scale*perspective,depth,perspective};}

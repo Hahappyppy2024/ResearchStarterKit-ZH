@@ -1,0 +1,403 @@
+/* Local-only final blue and mint palette. */
+
+:root,:root[data-research-theme=blue-mint]{--research-local-theme:blue-mint;--theme-bg:#f5f6f3;--theme-paper:rgba(255,255,255,.88);--theme-soft:#e9eff0;--theme-line:#d1dbd5;--theme-ink:#35434c;--theme-muted:#687671;--theme-accent:#607685;--theme-strong:#4f626e;--theme-focus:#a2b1af;--theme-blue-paper:rgba(232,225,250,.34);--theme-blue-soft:rgba(216,204,244,.40);--theme-blue-line:rgba(174,156,211,.30);--theme-mint-paper:rgba(224,242,211,.34);--theme-mint-soft:rgba(209,233,198,.48);--theme-mint-line:rgba(157,190,136,.30)}
+body{background:linear-gradient(110deg,rgba(224,242,211,.34) 0%,#f1f7fb 48%,rgba(232,225,250,.34) 100%)!important;background-attachment:fixed!important}
+:where(.split,.content-grid,.blog-desk,.news-desk,.ideas-desk,.scholar-three-desk,.course-prep-layout,.topic-library,.lab-directory)>:first-child{--theme-bg:rgba(248,245,255,.58);--theme-paper:var(--theme-blue-paper);--theme-soft:var(--theme-blue-soft);--theme-line:var(--theme-blue-line);--theme-accent:#7b6b99;--theme-strong:#61527e;--theme-focus:#c5b8de;--theme-ink:#494254;--theme-muted:#867b99}
+:where(.split,.content-grid,.blog-desk,.news-desk,.ideas-desk,.scholar-three-desk,.course-prep-layout,.topic-library,.lab-directory)>:not(:first-child){--theme-bg:rgba(241,249,233,.50);--theme-paper:var(--theme-mint-paper);--theme-soft:var(--theme-mint-soft);--theme-line:var(--theme-mint-line);--theme-accent:#617566;--theme-strong:#4f6055;--theme-focus:#acbaab;--theme-ink:#3a4a3f;--theme-muted:#72806f}
+:where(.grid,.deadline-grid,.scholar-directory-grid,.course-selection-list,.course-prep-lessons)>:nth-child(odd){--theme-paper:var(--theme-blue-paper);--theme-soft:var(--theme-blue-soft);--theme-line:var(--theme-blue-line);--theme-accent:#7b6b99;--theme-ink:#494254;--theme-muted:#867b99}
+:where(.grid,.deadline-grid,.scholar-directory-grid,.course-selection-list,.course-prep-lessons)>:nth-child(even){--theme-paper:var(--theme-mint-paper);--theme-soft:var(--theme-mint-soft);--theme-line:var(--theme-mint-line);--theme-accent:#617566;--theme-ink:#3a4a3f;--theme-muted:#72806f}
+:where(.panel,.card,.desk-panel,.course-prep-nav,.course-info-panel,.course-lesson-card,.course-selection-card,.scholar-directory-card,.library-results,.library-topics,.lab-overview,.deadline-card){background:var(--theme-paper)!important;border-color:var(--theme-line)!important;color:var(--theme-ink);box-shadow:0 3px 14px #385f7005}
+:where(.panel,.card,.desk-panel,.course-prep-nav,.course-info-panel,.course-lesson-card) :where(input:not([type=checkbox]):not([type=radio]),textarea,select){background:color-mix(in srgb,var(--theme-paper) 65%,white)!important;border-color:var(--theme-line)!important;color:var(--theme-ink)!important}
+.research-theme-unified{padding:8px 12px;color:var(--theme-muted);gap:7px}.theme-unified-swatch{display:inline-block;width:24px;height:13px;border-radius:8px;background:linear-gradient(90deg,#a9cde9 0 50%,#add7b9 50%);border:1px solid #bad4d8}
+
+/* Three-column desks: blue navigation, mint work area, lavender references. */
+:where(.three-desk-grid)>:first-child{--theme-paper:rgba(232,225,250,.34);--theme-soft:rgba(216,204,244,.40);--theme-line:rgba(174,156,211,.30);--theme-accent:#7b6b99;--theme-ink:#494254;--theme-muted:#867b99}
+:where(.three-desk-grid)>:nth-child(2){--theme-paper:rgba(224,242,211,.34);--theme-soft:rgba(209,233,198,.48);--theme-line:rgba(157,190,136,.30);--theme-accent:#617566;--theme-ink:#3a4a3f;--theme-muted:#72806f}
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk)>:nth-child(3){--theme-bg:rgba(248,245,255,.58);--theme-paper:rgba(232,225,250,.34);--theme-soft:rgba(216,204,244,.40);--theme-line:rgba(174,156,211,.30);--theme-accent:#7b6b99;--theme-strong:#61527e;--theme-focus:#c5b8de;--theme-ink:#494254;--theme-muted:#867b99}
+.three-desk-grid>.desk-timeline-column{background:var(--theme-paper);border:1px solid var(--theme-line);padding:16px;border-radius:12px}
+.three-desk-grid>.desk-category-column{background:var(--theme-paper)!important;border-color:var(--theme-line)!important}
+.theme-unified-swatch{background:linear-gradient(90deg,#a9cde9 0 33%,#add7b9 33% 66%,#d8c2eb 66%)}
+
+/* Final local column order: macaron green, aqua, blue. */
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk,.ideas-desk)>:first-child{--theme-paper:rgba(224,242,211,.34);--theme-soft:rgba(209,233,198,.48);--theme-line:rgba(157,190,136,.30);--theme-accent:#607361;--theme-ink:#38493d;--theme-muted:#74806f}
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk)>:nth-child(2){--theme-paper:rgba(214,234,251,.34);--theme-soft:rgba(192,221,245,.44);--theme-line:rgba(126,173,209,.30);--theme-accent:#617d8e;--theme-ink:#354955;--theme-muted:#738995}
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk,.ideas-desk)>:last-child{--theme-paper:rgba(232,225,250,.34);--theme-soft:rgba(216,204,244,.40);--theme-line:rgba(174,156,211,.30);--theme-accent:#7b6b99;--theme-ink:#494254;--theme-muted:#867b99}
+.theme-unified-swatch{background:linear-gradient(90deg,#c5d6b8 0 33%,#c4d9e8 33% 66%,#d8cbed 66%)}
+
+/* Cover non-grid and nested desks, including Paper Atlas and Paper Library. */
+:where(.lineage-sidebar,.library-topics,.project-sidebar,.conference-sidebar,.taxonomy-panel,.deck-list),:where(.split,.content-grid,.topic-library,.lab-directory,.layout,.arxiv-workspace,.obs-main)>:first-child{--theme-bg:rgba(241,249,233,.50);--theme-paper:rgba(224,242,211,.34);--theme-soft:rgba(209,233,198,.48);--theme-line:rgba(157,190,136,.30);--theme-accent:#607361;--theme-strong:#4f6054;--theme-focus:#aebba7;--theme-ink:#38493d;--theme-muted:#74806f;--bg:var(--theme-bg);--paper:var(--theme-paper);--soft:var(--theme-soft);--line:var(--theme-line);--border:var(--theme-line);--ink:var(--theme-ink);--muted:var(--theme-muted);--accent:var(--theme-accent);--blue:var(--theme-accent);--green:var(--theme-accent);}
+body:has(.lineage-sidebar)>.shell,:where(.library-results,.project-main-column,.conference-main,.viewer),:where(.split,.content-grid,.topic-library,.lab-directory,.layout,.arxiv-workspace,.obs-main)>:nth-child(2){--theme-bg:rgba(246,251,255,.76);--theme-paper:rgba(214,234,251,.34);--theme-soft:rgba(192,221,245,.44);--theme-line:rgba(126,173,209,.30);--theme-accent:#617d8e;--theme-strong:#506777;--theme-focus:#b6cad9;--theme-ink:#354955;--theme-muted:#738995;--bg:var(--theme-bg);--paper:var(--theme-paper);--soft:var(--theme-soft);--line:var(--theme-line);--border:var(--theme-line);--ink:var(--theme-ink);--muted:var(--theme-muted);--accent:var(--theme-accent);--blue:var(--theme-accent);--green:var(--theme-accent);}
+:where(.topic-context,.project-related-sidebar),:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk,.arxiv-workspace)>:nth-child(3){--theme-bg:rgba(248,245,255,.58);--theme-paper:rgba(232,225,250,.34);--theme-soft:rgba(216,204,244,.40);--theme-line:rgba(174,156,211,.30);--theme-accent:#7b6b99;--theme-strong:#61527e;--theme-focus:#c5b8de;--theme-ink:#494254;--theme-muted:#867b99;--bg:var(--theme-bg);--paper:var(--theme-paper);--soft:var(--theme-soft);--line:var(--theme-line);--border:var(--theme-line);--ink:var(--theme-ink);--muted:var(--theme-muted);--accent:var(--theme-accent);--blue:var(--theme-accent);--green:var(--theme-accent);}
+
+body:has(.lineage-sidebar)>.shell,.lineage-sidebar,.topic-context,.library-topics,.library-results,.project-sidebar,.conference-sidebar,.taxonomy-panel,.conference-main,.deck-list,.viewer{background:var(--theme-paper)!important;border-color:var(--theme-line)!important;color:var(--theme-ink)!important}
+body:has(.lineage-sidebar)>.shell :where(.hero,.collection-head,.stats,.viewbar,.filters,.map-panel,.map-canvas,.path-group){background:var(--theme-paper)!important;border-color:var(--theme-line)!important}
+:where(.lineage-sidebar,.topic-context,.library-topics,.library-results,.project-sidebar,.conference-sidebar,.deck-list,.viewer) :where(input:not([type=checkbox]):not([type=radio]),textarea,select){background:color-mix(in srgb,var(--theme-paper) 65%,white)!important;border-color:var(--theme-line)!important;color:var(--theme-ink)!important}
+:where(.content-grid,.split)>:last-child{--theme-paper:rgba(232,225,250,.34);--theme-soft:rgba(216,204,244,.40);--theme-line:rgba(174,156,211,.30);--theme-accent:#7b6b99;--theme-ink:#494254;--theme-muted:#867b99}
+
+/* BLOCK_SURFACE_HIERARCHY_V1 */
+/* Spaces stay pale; independent blocks rotate green/aqua/blue, nested sections stay lighter. */
+:root{--surface-green:rgba(209,233,198,.48);--surface-aqua:rgba(192,221,245,.44);--surface-blue:rgba(216,204,244,.40);--edge-green:rgba(157,190,136,.36);--edge-aqua:rgba(126,173,209,.34);--edge-blue:rgba(174,156,211,.34);--section-green:rgba(250,255,246,.74);--section-aqua:rgba(246,251,255,.76);--section-blue:rgba(250,247,255,.78)}
+:is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group){--block-fill:var(--module-two-fill);--block-edge:var(--module-two-edge);--block-section:var(--module-two-section);background:var(--block-fill)!important;border-color:var(--block-edge)!important;color:#354745;}
+:is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group):nth-child(3n+1 of :is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group)){--block-fill:var(--module-one-fill);--block-edge:var(--module-one-edge);--block-section:var(--module-one-section);}
+:is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group):nth-child(3n+2 of :is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group)){--block-fill:var(--module-two-fill);--block-edge:var(--module-two-edge);--block-section:var(--module-two-section);}
+:is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group):nth-child(3n+3 of :is(.panel:not(.schedule-panel):not(.library-results):not(.research-practice):not(.nightly-quiz-entry),.card,.course-info-panel,.course-model-panel,.course-innovation-panel,.lab-overview,.method-workflow-step,.knowledge-group)){--block-fill:var(--module-three-fill);--block-edge:var(--module-three-edge);--block-section:var(--module-three-section);}
+:is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article){--block-fill:var(--module-two-fill);--block-edge:var(--module-two-edge);--block-section:var(--module-two-section);background:var(--block-fill)!important;border-color:var(--block-edge)!important;color:#354745;}
+:is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article):nth-child(3n+1 of :is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article)){--block-fill:var(--module-one-fill);--block-edge:var(--module-one-edge);--block-section:var(--module-one-section);}
+:is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article):nth-child(3n+2 of :is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article)){--block-fill:var(--module-two-fill);--block-edge:var(--module-two-edge);--block-section:var(--module-two-section);}
+:is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article):nth-child(3n+3 of :is(.course-lesson-card,.course-model-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article)){--block-fill:var(--module-three-fill);--block-edge:var(--module-three-edge);--block-section:var(--module-three-section);}
+:is(.course-source-box,.course-model-group,.innovation-tier,.overview-field,.method-content,.method-output,.knowledge-section,.read-stats-grid>div,.library-stats-grid>a,.topic-context>section,.news-extra,.idea-extra,.todo-item,.chain-item){background:var(--block-section,var(--section-blue))!important;border-color:var(--block-edge,var(--theme-line))!important;}
+
+/* Keep individual modules visibly bounded even when the original layout used separators only. */
+:where(.method-workflow-step,.idea-entry,.library-paper,.course-model-group,.knowledge-section,.topic-context>section){border-radius:12px}
+:where(.method-workflow-step){padding:16px;margin-bottom:18px;border:1px solid var(--block-edge,var(--theme-line))}
+:where(.library-paper){padding:18px!important;margin:14px 0;border:1px solid var(--block-edge,var(--theme-line))}
+:where(.idea-entry){padding:14px 14px 20px 22px}
+:where(.course-model-group,.knowledge-section,.topic-context>section){padding:12px;margin-block:12px}
+:where(.todo-item){padding:12px;margin:10px 0;border:1px solid var(--block-edge,var(--theme-line));border-radius:10px}
+:where(.read-stats-grid,.library-stats-grid)>:nth-child(3n+1){background:var(--section-green)!important;border-color:var(--edge-green)!important}
+:where(.read-stats-grid,.library-stats-grid)>:nth-child(3n+2){background:var(--section-aqua)!important;border-color:var(--edge-aqua)!important}
+:where(.read-stats-grid,.library-stats-grid)>:nth-child(3n+3){background:var(--section-blue)!important;border-color:var(--edge-blue)!important}
+:where(.obs-scan){background:var(--section-green)!important}
+:where(.obs-frequency){background:var(--surface-aqua)!important;border:1px solid var(--edge-aqua);border-radius:12px;padding:16px;margin-top:16px}
+:where(.obs-time-section){background:var(--surface-blue)!important}
+:where(.obs-safety-starters){background:var(--surface-green)!important}
+:where(.obs-week-summary){background:var(--surface-aqua)!important}
+/* Text entry stays light regardless of the surrounding block. Status buttons and charts retain their own colors. */
+:is(.panel,.card,.desk-panel,.course-lesson-card,.news-role,.idea-card-editor,.method-content) :is(input:not([type=checkbox]):not([type=radio]),textarea,select){background:rgba(255,255,255,.88)!important;border-color:var(--block-edge,var(--theme-line))!important;color:#354745!important}
+
+:root{--module-one-fill:var(--surface-green);--module-one-edge:var(--edge-green);--module-one-section:var(--section-green);--module-two-fill:var(--surface-aqua);--module-two-edge:var(--edge-aqua);--module-two-section:var(--section-aqua);--module-three-fill:var(--surface-blue);--module-three-edge:var(--edge-blue);--module-three-section:var(--section-blue);}
+
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk)>:nth-child(2),body:has(.lineage-sidebar)>.shell,:where(.library-results,.project-main-column,.conference-main,.viewer),:where(.split,.topic-library,.lab-directory,.layout,.arxiv-workspace,.obs-main)>:nth-child(2){--module-one-fill:var(--surface-aqua);--module-one-edge:var(--edge-aqua);--module-one-section:var(--section-aqua);--module-two-fill:var(--surface-blue);--module-two-edge:var(--edge-blue);--module-two-section:var(--section-blue);--module-three-fill:var(--surface-green);--module-three-edge:var(--edge-green);--module-three-section:var(--section-green);}
+
+:where(.three-desk-grid,.course-prep-layout,.blog-desk,.news-desk,.scholar-three-desk)>:nth-child(3),:where(.topic-context,.project-related-sidebar),:where(.content-grid,.ideas-desk)>:last-child{--module-one-fill:var(--surface-blue);--module-one-edge:var(--edge-blue);--module-one-section:var(--section-blue);--module-two-fill:var(--surface-green);--module-two-edge:var(--edge-green);--module-two-section:var(--section-green);--module-three-fill:var(--surface-aqua);--module-three-edge:var(--edge-aqua);--module-three-section:var(--section-aqua);}
+
+/* Local final palette name; public files keep their blue-only default. */
+:root{--research-local-label:"透彩 · 绿蓝紫"}
+
+/* Final light sage, powder blue and lavender accents. */
+:root{--theme-blue-paper:rgba(232,225,250,.34);--theme-blue-soft:rgba(216,204,244,.40);--theme-blue-line:rgba(174,156,211,.30);--theme-mint-paper:rgba(214,234,251,.34);--theme-mint-soft:rgba(192,221,245,.44);--theme-mint-line:rgba(126,173,209,.30)}
+
+/* Translucent macaron finish; text opacity is never reduced. */
+body{background:linear-gradient(120deg,#f8fcf5 0%,#f3f9ff 52%,#f8f5ff 100%)!important;background-attachment:fixed!important}
+:is(.desk-panel,.course-prep-nav,.course-model-panel,.course-info-panel,.course-innovation-panel,.library-results,.library-topics,.lineage-sidebar,.topic-context,.panel,.card){border-radius:22px!important;background-clip:padding-box;box-shadow:0 4px 18px rgba(70,103,118,.035)}
+:is(.course-model-card,.course-lesson-card,.course-selection-card,.paper-card,.library-paper,.method-step-article,.scholar-directory-card,.deadline-card,.idea-entry,.news-role,.idea-card-editor,.idea-flashcard,.timeline-note,.project-paper-card,.obs-starter-card,.method-list-item,.frequent-link-card,.desk-time-card>article){border-radius:18px!important;background-clip:padding-box}
+:is(.course-model-card){padding:16px!important;margin:12px 0!important;border:1px solid var(--block-edge,var(--theme-line))!important}
+:is(.course-source-box,.course-model-group,.innovation-tier,.overview-field,.method-content,.method-output,.knowledge-section,.read-stats-grid>div,.library-stats-grid>a,.topic-context>section,.news-extra,.todo-item,.chain-item){border-radius:14px!important;background-clip:padding-box}
+:where(.course-model-card):first-child{margin-top:10px!important}
+
+/* Keep navigation readable when content scrolls underneath it. */
+.research-nav-host,.hub-header{background:rgba(255,255,255,.97)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* Separate candidate research ideas instead of stacking them against a divider. */
+.course-innovation-panel .innovation-tier{padding:14px!important;margin-top:18px}
+.course-innovation-panel .innovation-entry{margin:14px 0 0!important;padding:16px!important;border:1px solid var(--block-edge,var(--theme-line))!important;border-radius:18px!important;background:rgba(255,255,255,.56)!important;background-clip:padding-box}
+.course-innovation-panel .innovation-entry h4{margin:0;line-height:1.85}
+.course-innovation-panel .innovation-entry .course-project-count{margin:12px 0!important}
+.course-innovation-panel .innovation-entry .actions{margin:12px 0 0!important;gap:10px!important;flex-wrap:wrap}
+
+/* The reading action uses a soft lavender surface with clear white lettering. */
+.paper-catalog-actions .catalog-read{background:#b6a4d5!important;border-color:#b6a4d5!important;color:#fff!important;opacity:1!important;text-shadow:0 1px 2px rgba(66,43,99,.16)}
+.paper-catalog-actions .catalog-read:hover{background:#a68fc9!important;border-color:#a68fc9!important;color:#fff!important}
+
+/* Keep the celestial stage deep navy even while its canvas is loading. */
+.obs-canvas-wrap{background:#030b24!important;border-color:rgba(107,141,208,.38)!important;box-shadow:inset 0 0 42px #02091f,0 12px 30px rgba(7,15,47,.14)!important}
+
+
+.obs-paper-actions>button:first-child{background:#b6a4d5!important;border-color:#b6a4d5!important;color:#fff!important;opacity:1!important}
+.obs-paper-actions>button:first-child:hover{background:#a68fc9!important;color:#fff!important}
+
+
+/* Course selection and primary navigation actions: deep blue teal. */
+.course-prep-nav{--course-deep-teal:#286879;--course-deep-teal-hover:#205767}
+.course-prep-nav .course-fullname-choice[aria-current="page"],.course-prep-nav>.primary,.course-prep-nav .course-nav-mark{background:var(--course-deep-teal)!important;border-color:var(--course-deep-teal)!important;color:#fff!important}
+.course-prep-nav .course-fullname-choice[aria-current="page"]:hover,.course-prep-nav>.primary:hover{background:var(--course-deep-teal-hover)!important;border-color:var(--course-deep-teal-hover)!important;color:#fff!important}
+.course-prep-nav .course-type-choice[aria-pressed=true]{border-color:var(--course-deep-teal)!important;box-shadow:inset 3px 0 var(--course-deep-teal)!important}
+
+/* Foundations: rounded outer groups, inset sections and individual module cards. */
+#knowledge-catalog>aside{box-sizing:border-box;padding:20px!important;border:1px solid var(--edge-green)!important;border-radius:24px!important;background:var(--surface-green)!important;min-width:0}
+#knowledge-catalog #learning-stage-nav{padding:12px!important;border:1px solid var(--edge-green)!important;border-radius:18px;background:rgba(255,255,255,.55)!important;gap:8px}
+#knowledge-catalog .knowledge-group{padding:14px!important;margin:16px 0!important;border:1px solid var(--edge-aqua)!important;border-radius:22px!important;background:var(--surface-aqua)!important;overflow:hidden}
+#knowledge-catalog .knowledge-group:nth-child(3n+1){background:var(--surface-green)!important;border-color:var(--edge-green)!important}
+#knowledge-catalog .knowledge-group:nth-child(3n){background:var(--surface-blue)!important;border-color:var(--edge-blue)!important}
+#knowledge-catalog .knowledge-group>summary{padding:4px!important;line-height:1.7;background:transparent!important}
+#knowledge-catalog .knowledge-section{padding:12px!important;margin:14px 0 0!important;border:1px solid rgba(255,255,255,.65)!important;border-radius:18px!important;background:rgba(255,255,255,.62)!important}
+#knowledge-catalog .knowledge-section>summary{padding:4px 2px 10px;line-height:1.7}
+#knowledge-catalog .module-nav{padding:14px!important;margin:12px 0!important;border:1px solid var(--edge-blue)!important;border-radius:16px!important;background:var(--surface-blue)!important;box-sizing:border-box}
+#knowledge-catalog .module-nav:nth-of-type(3n+2){background:var(--surface-green)!important;border-color:var(--edge-green)!important}
+#knowledge-catalog .module-nav:nth-of-type(3n){background:var(--surface-aqua)!important;border-color:var(--edge-aqua)!important}
+#knowledge-catalog .module-nav.active{outline:2px solid #286879;outline-offset:-2px}
+#knowledge-catalog #modules{padding:0 6px 8px 0;scrollbar-width:thin}
+#workspace>.card{padding:22px!important;border-radius:24px!important;margin-bottom:22px!important}
+#workspace :is(.flash-panel,.module-entry,#module-notebook>section){box-sizing:border-box;padding:18px!important;margin:16px 0!important;border:1px solid var(--block-edge,var(--theme-line))!important;border-radius:18px!important;background:rgba(255,255,255,.58)!important;min-width:0}
+@media(min-width:701px){#knowledge-catalog{grid-template-columns:clamp(290px,26vw,350px) minmax(0,1fr)!important;gap:24px!important}}
+@media(max-width:700px){#knowledge-catalog{display:block!important}#knowledge-catalog>aside{margin-bottom:22px}}
+
+/* Courses: purpose panel > direction panel > subgroup > course card. */
+.course-prep-nav .course-type-nav{padding:12px;border:1px solid var(--edge-green);border-radius:20px;background:rgba(255,255,255,.58)}
+.course-prep-nav .course-category{padding:12px!important;margin:16px 0!important;border:1px solid var(--edge-aqua)!important;border-radius:22px!important;background:var(--surface-aqua)!important}
+.course-prep-nav .course-category:nth-of-type(3n+2){background:var(--surface-blue)!important;border-color:var(--edge-blue)!important}
+.course-prep-nav .course-category:nth-of-type(3n){background:var(--surface-green)!important;border-color:var(--edge-green)!important}
+.course-prep-nav .course-category>summary{padding:4px 0 10px!important;line-height:1.6}
+.course-prep-nav .course-fullname-group{padding:10px!important;margin:10px 0!important;border:1px solid rgba(255,255,255,.72);border-radius:18px;background:rgba(255,255,255,.6)}
+.course-prep-nav .course-fullname-group>.course-fullname-choice{margin:10px 0!important;border:1px solid var(--edge-aqua)!important;border-radius:15px!important;background:var(--surface-aqua)!important}
+.course-prep-nav .course-fullname-group>.course-fullname-choice:nth-of-type(3n+2){background:var(--surface-green)!important;border-color:var(--edge-green)!important}
+.course-prep-nav .course-fullname-group>.course-fullname-choice:nth-of-type(3n){background:var(--surface-blue)!important;border-color:var(--edge-blue)!important}
+.course-prep-nav .course-fullname-group>.course-fullname-choice[aria-current=page]{background:#286879!important;border-color:#286879!important;color:#fff!important}
+.course-lesson-card .course-plan-details{padding:12px;border:1px solid rgba(255,255,255,.65);border-radius:18px;background:rgba(255,255,255,.55);margin:14px 0}
+.course-lesson-card .course-lesson-plan{border-radius:14px;background:rgba(255,255,255,.7)!important}
+.course-prep-info .course-model-group{padding:12px;margin:14px 0;border:1px solid rgba(255,255,255,.7);border-radius:20px!important;background:rgba(255,255,255,.6)!important}
+
+/* Paper Atlas: outer taxonomy sections, inset directory and paper cards. */
+.lineage-sidebar>section{box-sizing:border-box;padding:12px!important;margin:16px 0!important;border:1px solid var(--edge-green)!important;border-radius:22px!important;background:var(--surface-green)!important}
+.lineage-sidebar>section:nth-of-type(3n+2){background:var(--surface-aqua)!important;border-color:var(--edge-aqua)!important}
+.lineage-sidebar>section:nth-of-type(3n){background:var(--surface-blue)!important;border-color:var(--edge-blue)!important}
+.lineage-sidebar>section>.section-label{margin:0 0 12px!important;padding:0 0 8px!important}
+.lineage-sidebar>section>div:last-child{padding:8px;border:1px solid rgba(255,255,255,.7);border-radius:18px;background:rgba(255,255,255,.6)}
+.lineage-sidebar .tree-group{padding:5px;margin-top:9px!important;margin-bottom:9px!important;border:1px solid var(--edge-aqua);border-radius:14px;background:var(--surface-aqua)}
+.lineage-sidebar .tree-group:nth-child(3n+2){background:var(--surface-green);border-color:var(--edge-green)}
+.lineage-sidebar .tree-group:nth-child(3n){background:var(--surface-blue);border-color:var(--edge-blue)}
+.lineage-sidebar .tree-label{white-space:normal!important;overflow-wrap:anywhere;line-height:1.6}
+.lineage-sidebar .tree-topic{border-radius:11px!important;padding:6px!important}
+.lineage-sidebar .tree-topic.active{background:#286879!important;color:#fff!important}
+.lineage-sidebar .tree-branches{padding:8px;margin:8px 0 0;border-radius:12px;background:rgba(255,255,255,.62)}
+.topic-context>section{padding:14px!important;margin:16px 0!important;border:1px solid var(--edge-blue)!important;border-radius:20px!important;background:rgba(255,255,255,.62)!important}
+.topic-context .topic-context-link{padding:10px!important;margin:10px 0!important;border:1px solid var(--edge-aqua);border-radius:13px!important;background:var(--surface-aqua)!important}
+.topic-context>section:nth-of-type(even) .topic-context-link{background:var(--surface-green)!important;border-color:var(--edge-green)}
+body:has(.lineage-sidebar) .map-panel{padding:20px!important;margin-bottom:22px!important;border:1px solid var(--edge-aqua)!important;border-radius:24px!important;background:var(--surface-aqua)!important}
+body:has(.lineage-sidebar) .map-node{border-radius:16px!important;border-color:var(--edge-blue)!important;background:var(--surface-blue)!important}
+body:has(.lineage-sidebar) .map-node:nth-child(3n){background:var(--surface-green)!important;border-color:var(--edge-green)!important}
+body:has(.lineage-sidebar) .paper-card{padding:18px!important;margin:14px 0!important;border:1px solid var(--block-edge,var(--theme-line))!important;border-radius:18px!important}
+
+.lineage-sidebar .tree-topic.active :is(.tree-label,small){color:#fff!important}
+
+
+/* Compact Paper Atlas labels: useful text gets the sidebar width. */
+body:has(.lineage-sidebar){--atlas-local-sidebar-width:clamp(280px,24vw,340px)}
+.lineage-sidebar{box-sizing:border-box;width:var(--atlas-local-sidebar-width)!important;padding:16px 12px!important}
+.lineage-sidebar~.shell{margin-left:var(--atlas-local-sidebar-width)!important}
+.lineage-sidebar :is(.workspace-label,.sidebar-bottom,.brand-icon,.brand small){display:none!important}
+.lineage-sidebar .brand{font-size:19px!important;margin-bottom:16px}
+.lineage-sidebar>section{padding:9px!important;margin:12px 0!important}
+.lineage-sidebar>section>div:last-child{padding:6px!important}
+.lineage-sidebar .tree-group{padding:3px!important;margin-top:6px!important;margin-bottom:6px!important;border-radius:12px!important;min-width:0}
+.lineage-sidebar .tree-main{gap:0!important}
+.lineage-sidebar .tree-toggle{display:none!important}
+.lineage-sidebar .tree-topic{display:flex!important;align-items:center;gap:7px!important;flex:1;width:100%;min-width:0;font-size:12px!important;line-height:1.5!important;padding:7px 8px!important}
+.lineage-sidebar .tree-label{font-size:12px!important;white-space:nowrap!important;overflow:hidden;text-overflow:ellipsis;line-height:1.5!important;flex:1;min-width:0}
+.lineage-sidebar .tree-topic small{font-size:10px!important;flex:none;white-space:nowrap}
+.lineage-sidebar .tree-branches:empty{display:none!important}
+@media(min-width:761px) and (max-width:1000px){.topic-context{margin-left:var(--atlas-local-sidebar-width)!important}}
+@media(max-width:760px){.lineage-sidebar{width:100%!important}.lineage-sidebar~.shell,.topic-context{margin-left:0!important}}
+
+/* Compact conference/year filters and search controls in the paper library. */
+.library-page .library-filter-hint{font-size:11px!important;margin:8px 0 5px!important}
+.library-page .library-pills{gap:3px!important;padding:3px!important;margin:8px 0!important}
+.library-page .library-pills button{font-size:12px!important;line-height:1.5!important;padding:5px 10px!important;min-height:30px}
+.library-page .library-results :is(#paper-search,#paper-state){font-size:12px!important;line-height:1.5!important;padding:8px 10px!important;margin-top:0!important;min-height:36px}
+.library-page #paper-search::placeholder{font-size:12px!important}
+
+/* Dense venue navigation with dot separators; years retain their pill controls. */
+.library-page #venue-tabs{gap:0!important;padding:3px 5px!important;border-radius:16px!important}
+.library-page #venue-tabs button{position:relative;padding:5px 8px!important;border:0!important;border-radius:10px!important;margin:0!important}
+.library-page #venue-tabs button+button{margin-left:6px!important}
+.library-page #venue-tabs button+button::before{content:'·';position:absolute;left:-5px;top:50%;transform:translateY(-50%);color:var(--theme-muted);font-weight:400;pointer-events:none}
+
+/* Tight venue spacing: compact labels with a small dot between conferences. */
+.library-page #venue-tabs{gap:0!important;padding:2px!important}
+.library-page #venue-tabs button{padding:4px 4px!important;min-width:0!important;min-height:26px!important}
+.library-page #venue-tabs button+button{margin-left:3px!important}
+.library-page #venue-tabs button+button::before{left:-3px;font-size:10px}
+
+/* Venue labels need no separator after switching counts to parentheses. */
+.library-page #venue-tabs button+button::before{content:none!important}
+
+/* Give recent writing resources room and separate each saved link. */
+@media(min-width:1051px){.methods-desk .three-desk-grid{grid-template-columns:clamp(270px,23vw,330px) minmax(340px,1fr) clamp(270px,24vw,350px)!important;gap:24px!important}}
+@media(min-width:701px) and (max-width:1050px){.methods-desk .three-desk-grid{grid-template-columns:260px minmax(0,1fr)!important;gap:22px!important}}
+.methods-desk .desk-category-column{padding:18px 14px!important;box-sizing:border-box;min-width:0;scrollbar-width:thin}
+.methods-desk .desk-category-column>.panel{padding:16px!important;margin:22px 0 0!important;border:1px solid var(--edge-green,var(--theme-line))!important;border-radius:22px!important;box-sizing:border-box}
+.methods-desk .desk-category-column>.panel h2{margin:0 0 14px!important;line-height:1.6}
+.methods-desk .desk-category-column>.panel>.small{margin:0 0 18px!important;line-height:1.8}
+.methods-desk #method-recent,.methods-desk #method-bookmarks{display:grid;gap:16px;margin-top:16px}
+.methods-desk .method-resource{padding:16px!important;margin:0!important;border:1px solid var(--block-edge,var(--theme-line))!important;border-radius:18px!important;background:rgba(255,255,255,.62)!important;box-sizing:border-box;min-width:0}
+.methods-desk .method-resource>a{display:block;font-size:13px!important;line-height:1.7}
+.methods-desk .method-resource>small{display:block;margin:12px 0 0!important;font-size:11px;line-height:1.7}
+.methods-desk .method-resource>p{margin:12px 0!important;line-height:1.8!important}
+.methods-desk .method-resource>div{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+@media(max-width:700px){.methods-desk .desk-category-column{max-height:460px!important}}
+.methods-desk .method-workflow-step{margin:0 0 16px 10px!important;padding:16px 18px 20px!important;border-radius:18px!important}
+.methods-desk .method-workflow-step:before{top:24px!important}
+.methods-desk .method-workflow-step:last-child{margin-bottom:0!important}
+
+
+/* Make taxonomy ownership visible: child rows live inside their parent panel. */
+.lineage-sidebar .tree-group[data-depth="0"]{padding:5px!important;margin:9px 0!important;border-radius:16px!important}
+.lineage-sidebar .tree-group[data-depth="0"]>.tree-main .tree-label{font-weight:700!important;font-size:12px!important}
+.lineage-sidebar .tree-children{margin:6px 2px 5px 10px;padding:2px 0 2px 10px;border-left:2px solid rgba(40,104,121,.32);border-radius:0 0 0 10px}
+.lineage-sidebar .tree-children>.tree-group{padding:1px!important;margin:6px 0!important;border:1px solid rgba(255,255,255,.75)!important;border-radius:11px!important;background:rgba(255,255,255,.65)!important}
+.lineage-sidebar .tree-children .tree-topic{padding:6px 7px!important}
+.lineage-sidebar .tree-children .tree-label{font-size:11.5px!important;font-weight:400!important;color:var(--theme-ink)}
+.lineage-sidebar .tree-children .tree-topic small{font-size:10px!important}
+.lineage-sidebar .tree-children .tree-topic.active .tree-label{color:#fff!important}
+
+/* Academic lotus reference: one mist-blue palette across every local workspace. */
+html[data-research-theme="blue-mint"],html[data-research-theme="blue-mint"] body,html[data-research-theme="blue-mint"] body *{
+ --research-local-label:"雾蓝 · 荷塘";
+ --theme-bg:#e8f3fc;--theme-paper:rgba(248,252,255,.87);--theme-soft:#e2eff9;--theme-line:#c5ddea;
+ --theme-ink:#3c6077;--theme-muted:#7290a7;--theme-accent:#628fa9;--theme-strong:#426d86;--theme-focus:#9fc7dd;
+ --theme-blue-paper:rgba(240,248,255,.88);--theme-blue-soft:#dfedf8;--theme-blue-line:#c5ddea;
+ --theme-mint-paper:rgba(245,250,255,.88);--theme-mint-soft:#e7f1fa;--theme-mint-line:#cbdfea;
+ --surface-green:rgba(242,249,255,.83);--surface-aqua:rgba(235,245,253,.86);--surface-blue:rgba(229,241,252,.86);
+ --edge-green:#cbdfea;--edge-aqua:#c5ddea;--edge-blue:#bfd9e9;--block-edge:#c5ddea;
+ --bg:var(--theme-bg);--paper:var(--theme-paper);--soft:var(--theme-soft);--line:var(--theme-line);--border:var(--theme-line);
+ --ink:var(--theme-ink);--muted:var(--theme-muted);--accent:var(--theme-accent);--blue:var(--theme-accent);--green:var(--theme-accent);
+}
+html[data-research-theme="blue-mint"] body{
+ background:linear-gradient(180deg,#e2f0fc 0%,#eaf5fd 50%,#f3f9fe 100%)!important;
+ color:#3c6077!important;font-family:"Microsoft YaHei","PingFang SC",sans-serif;line-height:1.75;
+}
+html[data-research-theme="blue-mint"] :is(.hub-header,.research-shared-header){background:rgba(240,247,255,.97)!important;border-color:#cbdfea!important;box-shadow:none!important;padding-top:18px;padding-bottom:14px}
+html[data-research-theme="blue-mint"] .research-motto{color:#3f6b86!important;font-size:clamp(28px,3vw,42px);top:12px;letter-spacing:2px}
+html[data-research-theme="blue-mint"] .hub-brand{color:#3f6b86!important}
+html[data-research-theme="blue-mint"] .brand-mark{background:#d8eaf6!important;color:#416f89!important;border:1px solid #bed9e9!important;border-radius:50%!important}
+html[data-research-theme="blue-mint"] .hub-tabs{gap:8px!important}
+html[data-research-theme="blue-mint"] .hub-tabs :is(a,button){background:transparent!important;color:#6a8ca4!important;border:0!important;border-bottom:2px solid #ccdeea!important;border-radius:0!important;padding:10px 5px 11px!important;font-size:14px;font-weight:400!important;box-shadow:none!important}
+html[data-research-theme="blue-mint"] .hub-tabs :is(a[aria-current="page"],button[aria-selected="true"]){color:#4c7c99!important;border-bottom:3px solid #7ba7c0!important}
+html[data-research-theme="blue-mint"] .hub-tabs small{font-family:Georgia,"Times New Roman",serif!important;font-size:11px!important;color:#7d9aaf!important;letter-spacing:.2px;margin-top:5px}
+html[data-research-theme="blue-mint"] .hub-toolbar{background:#e6f1f9!important;border-color:#cbdfea!important;min-height:44px}
+html[data-research-theme="blue-mint"] .research-toolbar-tagline{color:#7599b1!important;text-shadow:none!important}
+html[data-research-theme="blue-mint"] .theme-unified-swatch{background:linear-gradient(90deg,#d7eafa,#b8d8eb)!important;border-color:#c0dcea!important}
+html[data-research-theme="blue-mint"] :is(h1,.map-heading h2){font-family:"STXingkai","华文行楷","KaiTi",serif!important;font-weight:400!important;color:#3c647d!important;letter-spacing:2px;line-height:1.4}
+html[data-research-theme="blue-mint"] h1{font-size:clamp(34px,3.6vw,49px)!important}
+html[data-research-theme="blue-mint"] :is(h2,h3,h4){color:#527a94;line-height:1.6}
+html[data-research-theme="blue-mint"] :is(.eyebrow,.title-en,.brand-sub){font-family:Georgia,"Times New Roman",serif!important;color:#7799af!important;letter-spacing:1px}
+html[data-research-theme="blue-mint"] :is(.three-desk-heading,.course-prep-page main>header,.library-page main>header,.page-heading,.projects-hero){
+ background-image:linear-gradient(90deg,rgba(239,248,255,.67),rgba(240,248,255,.24),rgba(239,248,255,.65)),url('http://127.0.0.1:8866/assets/academic-lotus-watercolor.png')!important;
+ background-size:cover!important;background-position:center 65%!important;border:1px solid #d1e5f1!important;border-radius:24px!important;
+ min-height:170px;box-sizing:border-box;padding:26px 30px!important;margin-bottom:26px!important;box-shadow:0 8px 30px #5485a00a!important;
+}
+html[data-research-theme="blue-mint"] :is(.three-desk-heading,.course-prep-page main>header,.page-heading) p{color:#6a8fa8!important}
+html[data-research-theme="blue-mint"] :is(.panel,.card,.desk-panel,.course-prep-nav,.course-info-panel,.course-lesson-card,.course-selection-card,.scholar-directory-card,.library-results,.library-topics,.lab-overview,.deadline-card,.method-workflow-step,.map-panel,.paper-card,.method-resource,.map-node,.course-reference-card,.course-innovation-group){background:rgba(248,252,255,.87)!important;border-color:#c5ddea!important;color:#4a718a!important;box-shadow:0 5px 22px #759bb30a!important}
+html[data-research-theme="blue-mint"] :is(.desk-category-column,.desk-timeline-column,.desk-reference-column,.course-prep-nav,.library-topics,.library-results,.lineage-sidebar,.topic-context,.project-sidebar,.conference-sidebar,.taxonomy-panel,.conference-main,.deck-list,.viewer){background:rgba(244,250,255,.83)!important;border-color:#c5ddea!important;color:#4a718a!important}
+html[data-research-theme="blue-mint"] :is(.desk-category-column,.desk-timeline-column,.course-prep-nav,.library-topics,.library-results,.topic-context,.project-sidebar,.course-lesson-card,.panel){border-radius:22px!important}
+html[data-research-theme="blue-mint"] :is(.paper-card,.method-resource,.map-node,.course-selection-card,.method-workflow-step){border-radius:18px!important}
+html[data-research-theme="blue-mint"] :is(.method-guide,.paper-item,.course-innovation-item,.tree-group,.tree-children>.tree-group){background:rgba(239,247,254,.82)!important;border-color:#ccdfec!important}
+html[data-research-theme="blue-mint"] :is(input:not([type=checkbox]):not([type=radio]),textarea,select){background:rgba(255,255,255,.76)!important;color:#456c84!important;border-color:#c7dfed!important;box-shadow:none!important}
+html[data-research-theme="blue-mint"] :is(button,.button){border-color:#c1dbe9;color:#6087a0;border-radius:12px}
+html[data-research-theme="blue-mint"] :is(button.primary,.button.primary,.course-selection-card.active,.tree-topic.active,.library-topic[aria-current="true"]){background:#678fa7!important;color:white!important;border-color:#678fa7!important}
+html[data-research-theme="blue-mint"] :is(.course-prep-nav .course-type-button[aria-pressed="true"],.course-prep-nav .course-type-button.active){background:#d7e9f6!important;color:#436e88!important}
+html[data-research-theme="blue-mint"] :is(a,.method-resource>a){color:#5b85a0}
+html[data-research-theme="blue-mint"] :is(.three-desk-grid,.course-prep-layout,.topic-library,.blog-desk,.news-desk,.ideas-desk){gap:24px!important}
+html[data-research-theme="blue-mint"] .obs-canvas-wrap{background:#02091b!important}
+@media(max-width:800px){
+ html[data-research-theme="blue-mint"] :is(.three-desk-heading,.course-prep-page main>header,.page-heading){padding:22px 18px!important;min-height:145px}
+ html[data-research-theme="blue-mint"] .research-motto{position:static!important;font-size:26px!important}
+ html[data-research-theme="blue-mint"] .hub-tabs{flex-wrap:nowrap!important;overflow-x:auto!important;gap:12px!important}
+ html[data-research-theme="blue-mint"] .hub-tabs :is(a,button){flex:0 0 auto!important;min-width:88px}
+}
+@media(prefers-reduced-motion:reduce){html[data-research-theme="blue-mint"] *{scroll-behavior:auto!important}}
+
+/* White text is reserved for filled blue surfaces, including the current schedule. */
+html[data-research-theme="blue-mint"] .now-card{background:#557f99!important;color:#fff!important}
+html[data-research-theme="blue-mint"] .now-card :is(h2,h3,#current-title,#next-title,.daily-calm-reminder){color:#fff!important;opacity:1!important}
+html[data-research-theme="blue-mint"] .now-card :is(p,span,time,.eyebrow,#current-detail,#current-time,#remaining,#next-time){color:#edf6ff!important;opacity:1!important}
+html[data-research-theme="blue-mint"] .now-card .next-block{border-color:rgba(255,255,255,.26)!important}
+html[data-research-theme="blue-mint"] :is(.nightly-quiz-entry,#schedule>.task.active) :is(h2,h3,h4,p,.eyebrow,.task-title,.task-name,.task-time){color:#fff!important}
+html[data-research-theme="blue-mint"] :is(.tree-topic.active,.course-selection-card.active,.library-topic[aria-current="true"],button.primary,.button.primary) :is(span,small,strong,h3){color:#fff!important}
+
+/* Selected foundation stages must retain clear white labels and counts. */
+html[data-research-theme="blue-mint"] .learning-stage-choice[aria-current="true"]{background:#557f99!important;border-color:#557f99!important;color:#fff!important;font-weight:600!important}
+html[data-research-theme="blue-mint"] .learning-stage-choice[aria-current="true"] :is(small,span,strong){color:#fff!important;opacity:1!important}
+html[data-research-theme="blue-mint"] .module-nav.active{background:#d9ebf8!important;border-color:#adcfe3!important;color:#365e77!important}
+html[data-research-theme="blue-mint"] .module-nav.active :is(strong,small){color:#365e77!important;opacity:1!important}
+
+/* One readable foreground for all detected dark filled surfaces. */
+html[data-research-theme="blue-mint"] [data-research-contrast="light"],html[data-research-theme="blue-mint"] [data-research-contrast="light"] :is(span,strong,small,label,h1,h2,h3,h4,p,time,.eyebrow){color:#fff!important;opacity:1!important}
+html[data-research-theme="blue-mint"] .reader-tabs [aria-pressed="true"]{color:#fff!important;background:#557f99!important;border-color:#557f99!important}
+html[data-research-theme="blue-mint"] .reader-tabs [aria-pressed="true"] *{color:#fff!important}
+html[data-research-theme="blue-mint"] :is(.catalog-read,.scholar-read){background:#b6a4d5!important;border-color:#b6a4d5!important;color:#fff!important}
+html[data-research-theme="blue-mint"] :is(.catalog-read,.scholar-read):hover{background:#a38cc8!important;border-color:#a38cc8!important;color:#fff!important}
+
+/* Plan actions follow the same blue palette; reading keeps its requested lavender. */
+html[data-research-theme="blue-mint"] .catalog-plan-action{background:#edf6fd!important;border-color:#bed9e9!important;color:#557f99!important}
+
+html[data-research-theme="blue-mint"] :is(.intro,.desk-heading,.reading-desk main>header){background-image:linear-gradient(90deg,rgba(239,248,255,.67),rgba(240,248,255,.24),rgba(239,248,255,.65)),url('http://127.0.0.1:8866/assets/academic-lotus-watercolor.png')!important;background-size:cover!important;background-position:center 65%!important;border:1px solid #d1e5f1!important;border-radius:24px!important;min-height:170px;padding:26px 30px!important;margin-bottom:26px!important;box-sizing:border-box}
+html[data-research-theme="blue-mint"] dialog{background:rgba(248,252,255,.98)!important;border-color:#bed8e8!important;color:#3c6077!important}
+html[data-research-theme="blue-mint"] dialog::backdrop{background:rgba(43,76,97,.32);backdrop-filter:blur(5px)}
+
+/* Rounded, clearly framed spaces with a consistent inner gutter. */
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) :is(.hero,.stats,.collection-head,.viewbar,.filters){border:1px solid #c5ddea!important;border-radius:26px!important;background:rgba(248,252,255,.87)!important;box-sizing:border-box;margin:0 0 22px!important;box-shadow:0 5px 22px #759bb309!important}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) .hero{padding:30px 32px!important;overflow:hidden;background-image:linear-gradient(90deg,rgba(244,250,255,.90),rgba(244,250,255,.70)),url('http://127.0.0.1:8866/assets/academic-lotus-watercolor.png')!important;background-size:cover!important;background-position:center bottom!important}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) .stats{padding:18px 22px!important;gap:16px}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) .stats>div{padding:10px 14px!important}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) .collection-head{padding:22px 26px!important;gap:18px}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) :is(.viewbar,.filters){padding:16px 22px!important;gap:14px;flex-wrap:wrap}
+html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) .viewbar .tabs button{border-radius:999px!important;padding:9px 14px!important}
+html[data-research-theme="blue-mint"] .project-sidebar{padding:22px 18px!important;border:1px solid #c5ddea!important;border-radius:26px!important;background:rgba(248,252,255,.87)!important;box-sizing:border-box;min-width:0}
+html[data-research-theme="blue-mint"] .project-sidebar>.section-heading{padding:0 2px!important;margin:0 0 18px!important;gap:12px;flex-wrap:wrap}
+html[data-research-theme="blue-mint"] #project-list{display:grid;gap:14px}
+html[data-research-theme="blue-mint"] .project-nav{padding:18px!important;margin:0!important;border:1px solid #c5ddea!important;border-radius:18px!important;box-sizing:border-box}
+html[data-research-theme="blue-mint"] :is(.core-card,.journal-card,.project-info,.project-related-papers,.project-related-sidebar,.project-info-panel,.project-heading){border:1px solid #c5ddea!important;border-radius:24px!important;padding:22px!important;box-sizing:border-box;background:rgba(248,252,255,.87)!important}
+html[data-research-theme="blue-mint"] :is(.desk-category-column,.desk-reference-column,.course-prep-nav,.library-topics){border:1px solid #c5ddea!important;padding:20px!important;box-sizing:border-box}
+html[data-research-theme="blue-mint"] :is(.panel,.card,.desk-panel){border:1px solid #c5ddea!important}
+html[data-research-theme="blue-mint"] .obs-scan{background:#f3f9fe!important;border-color:#c5ddea!important;padding:22px!important}
+html[data-research-theme="blue-mint"] #obs-paper-list{display:grid;gap:10px;margin:14px 0}
+html[data-research-theme="blue-mint"] .obs-paper-row{border:1px solid #cbdfea!important;border-radius:15px!important;background:rgba(252,254,255,.90)!important;margin:0!important;padding:13px 14px!important;color:#476f89!important;line-height:1.65!important;text-align:left}
+html[data-research-theme="blue-mint"] .obs-paper-row.selected{background:#dcecf8!important;border-color:#9dbfd7!important;box-shadow:inset 3px 0 #739fb9!important}
+html[data-research-theme="blue-mint"] .obs-paper-row.selected .title-zh{color:#315e7a!important}
+html[data-research-theme="blue-mint"] .obs-paper-row .title-en{color:#6d8fa6!important;font-size:12px!important;line-height:1.65!important}
+@media(max-width:760px){html[data-research-theme="blue-mint"] body:has(.lineage-sidebar) :is(.hero,.collection-head,.viewbar,.filters){padding:18px!important;border-radius:22px!important}html[data-research-theme="blue-mint"] .project-sidebar{padding:18px!important}html[data-research-theme="blue-mint"] #project-list{display:flex;gap:12px}}
+
+/* Quiz uses the plan-action blue; featured papers use a soft pink heart. */
+html[data-research-theme="blue-mint"] .paper-daily-quiz-toggle{background:#edf6fd!important;border-color:#bed9e9!important;color:#557f99!important}
+html[data-research-theme="blue-mint"] .paper-daily-quiz-toggle[aria-pressed="true"]{background:#dcecf8!important;border-color:#9ebfd6!important;color:#365f79!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart{display:inline-flex!important;align-items:center;justify-content:center;background:#fff5f9!important;border:1px solid #edcedb!important;border-radius:999px!important;color:#e4abc2!important;font-family:Georgia,"Times New Roman",serif!important;font-size:25px!important;font-weight:400!important;line-height:1!important;min-width:40px;min-height:35px;padding:4px 11px!important;box-shadow:none!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart[aria-pressed="true"]{background:#fbe4ee!important;border-color:#dea4bc!important;color:#cf85a5!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart:hover{background:#fceaf2!important;border-color:#dca1ba!important;color:#d18aaa!important}
+
+/* Favorite: blue before saving, pale pink after saving, with a brief heart burst. */
+html[data-research-theme="blue-mint"] .catalog-featured-heart{background:#edf6fd!important;border-color:#bed9e9!important;color:#628fa9!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart:hover{background:#e2f0fb!important;border-color:#a5c9df!important;color:#527d98!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart[aria-pressed="true"]{background:#fbe4ee!important;border-color:#e4b7cb!important;color:#d696b2!important}
+html[data-research-theme="blue-mint"] .catalog-featured-heart[aria-pressed="true"]:hover{background:#f9dce9!important;color:#ce87a7!important}
+.favorite-heart-burst{position:fixed;width:0;height:0;z-index:20000;pointer-events:none;overflow:visible}
+.favorite-heart-burst i{position:absolute;left:0;top:0;font:18px/1 Georgia,"Times New Roman",serif;color:#e6aac5;text-shadow:0 1px 4px #fff9;animation:research-heart-pop 780ms cubic-bezier(.12,.68,.26,1) var(--heart-delay) both;pointer-events:none}
+.favorite-heart-burst i:nth-child(3n+1){color:#d9b2e2;font-size:14px}.favorite-heart-burst i:nth-child(3n+2){color:#edbad0;font-size:20px}
+@keyframes research-heart-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.25)}15%{opacity:1}65%{opacity:.9}100%{opacity:0;transform:translate(calc(-50% + var(--heart-x)),calc(-50% + var(--heart-y))) rotate(var(--heart-turn)) scale(.65)}}
+@media(prefers-reduced-motion:reduce){.favorite-heart-burst{display:none!important}}
+
+/* Date controls sit below the lotus heading, with their own breathing room. */
+html[data-research-theme="blue-mint"] .daily-date-toolbar{display:flex;justify-content:flex-end;align-items:center;margin:-6px 0 22px;padding:0 6px 6px;gap:12px}
+html[data-research-theme="blue-mint"] .daily-date-toolbar .date-control{max-width:100%;min-width:0}
+html[data-research-theme="blue-mint"] .daily-date-toolbar .date-control>div{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+html[data-research-theme="blue-mint"] .daily-date-toolbar .date-control>label{color:#6087a0;margin-bottom:8px}
+@media(max-width:700px){html[data-research-theme="blue-mint"] .daily-date-toolbar{margin:0 0 18px;padding:0;justify-content:flex-start}html[data-research-theme="blue-mint"] .daily-date-toolbar .date-control>label{display:block}html[data-research-theme="blue-mint"] .daily-date-toolbar .date-control>div{justify-content:flex-start}}
+
+/* Keep the original date placement; blend its input with the powder-blue background. */
+html[data-research-theme="blue-mint"] .page-heading input#date{background:#e4f1fb!important;border:1px solid #c1dceb!important;border-radius:12px!important;color:#456f89!important;padding:9px 12px!important;box-shadow:none!important}
+html[data-research-theme="blue-mint"] .page-heading input#date::-webkit-calendar-picker-indicator{opacity:.65}
+
+/* Reserve enough room for the full year and the native calendar icon. */
+html[data-research-theme="blue-mint"] .page-heading input#date{width:184px!important;min-width:184px!important;max-width:100%;flex:0 0 184px!important;box-sizing:border-box!important;padding:9px 12px!important}
+html[data-research-theme="blue-mint"] .page-heading input#date::-webkit-datetime-edit{padding-right:8px}
+html[data-research-theme="blue-mint"] .page-heading input#date::-webkit-calendar-picker-indicator{margin-left:8px;padding:0;width:18px;height:18px;flex-shrink:0}
+
+/* Compact date field: half-centimetre space between the year and calendar icon. */
+html[data-research-theme="blue-mint"] .page-heading input#date{width:auto!important;min-width:0!important;max-width:none!important;flex:0 0 auto!important;field-sizing:content;padding:9px 12px!important}
+html[data-research-theme="blue-mint"] .page-heading input#date::-webkit-datetime-edit{padding:0}
+html[data-research-theme="blue-mint"] .page-heading input#date::-webkit-calendar-picker-indicator{margin-left:.5cm;margin-right:0;padding:0;width:18px;height:18px;flex-shrink:0}
+
+/* The document ends in a soft lotus pond rather than an empty grey strip. */
+html[data-research-theme="blue-mint"]{min-height:100%;background:#e8f3fc!important}
+html[data-research-theme="blue-mint"] body{min-height:100vh;box-sizing:border-box;background-image:url('http://127.0.0.1:8866/assets/academic-lotus-watercolor.png'),linear-gradient(180deg,#e2f0fc 0%,#eaf5fd 50%,#f3f9fe 100%)!important;background-position:center bottom,center top!important;background-size:100% auto,100% 100%!important;background-repeat:no-repeat!important;background-attachment:scroll!important}
+html[data-research-theme="blue-mint"] body:has(main>#back[data-research-back]){padding-bottom:190px!important}
+@media(max-width:700px){html[data-research-theme="blue-mint"] body{background-size:auto 230px,100% 100%!important}html[data-research-theme="blue-mint"] body:has(main>#back[data-research-back]){padding-bottom:150px!important}}
+
+html[data-research-theme="blue-mint"] body{background-image:linear-gradient(180deg,#eaf5fd 0%,rgba(234,245,253,0)32%),url('http://127.0.0.1:8866/assets/academic-lotus-watercolor.png'),linear-gradient(180deg,#e2f0fc 0%,#eaf5fd 50%,#f3f9fe 100%)!important;background-position:center bottom,center bottom,center top!important;background-size:100% calc(100vw / 3),100% auto,100% 100%!important}
+@media(max-width:700px){html[data-research-theme="blue-mint"] body{background-size:100% 230px,auto 230px,100% 100%!important}}
+
+html[data-research-theme="blue-mint"] .research-nav-host .brand-mark{background:transparent url('http://127.0.0.1:8866/assets/seven-lotus-brand.svg') center/contain no-repeat!important;border:0!important;border-radius:0!important;color:transparent!important}
+
+html[data-research-theme] .research-nav-host .brand-mark{background:none!important}html .research-nav-host .brand-mark img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important}
+
+html .research-nav-host .brand-mark>svg{display:block!important;width:100%!important;height:100%!important;overflow:visible}

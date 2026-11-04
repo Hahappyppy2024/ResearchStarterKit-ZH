@@ -1,0 +1,4 @@
+import {knowledgeApi as api} from './paper-knowledge.js';
+let loading=false;
+async function refresh(){if(loading)return;loading=true;try{const s=await api('flash-statistics');for(const name of ['total','known','review','untested','due'])document.getElementById('flash-stat-'+name).textContent=s[name];document.getElementById('flash-stats-note').textContent=`论文 ${s.paper} · 知识模块 ${s.module} · 原有面试题库 ${s.legacy} 张。按最近一次自评／判定统计，未测试单列；学会后仍会安排复习。`;document.getElementById('night-quiz-due').textContent=s.due?'今天有 '+s.due+' 张到期／待测试卡片，睡前先回忆再核对。':'今天没有到期卡片，可进入查看今天的题单。'}catch(e){document.getElementById('flash-stats-note').textContent='统计暂未读取：'+e.message;for(const name of ['total','known','review','untested','due'])document.getElementById('flash-stat-'+name).textContent='—'}finally{loading=false}}
+refresh();window.addEventListener('focus',refresh);window.addEventListener('storage',refresh);window.addEventListener('paper-knowledge-change',refresh);setInterval(refresh,60000);

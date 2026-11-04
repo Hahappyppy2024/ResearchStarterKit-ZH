@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {topicIndex} from '../sites/mist-blue-lotus/app/web/arxiv-topics.mjs';
+const nodes=[{id:'root',kind:'topic',name:'软件工程'},{id:'child',parentId:'root',kind:'topic',name:'代码生成',en:'Code Generation'},{id:'problem',kind:'problem',name:'问题'}];
+const papers=[{id:'a',topics:['Code Generation']},{id:'b',topics:[]},{id:'c',topicIds:['child']},{id:'d',topics:['Object Detection']}];
+const result=topicIndex(nodes,[{id:'taxonomy-child',paperIds:['b']}],papers);
+assert.equal(result.topics.length,2);
+assert.deepEqual([...result.members.get('child')],['a','b','c']);
+assert.deepEqual([...result.members.get('root')],['a','b','c']);
+assert.deepEqual([...result.unclassified],['d']);
+assert.equal(topicIndex(nodes,[],[]).unclassified.size,0);
+assert.equal(topicIndex([{id:'x',kind:'topic',parentId:'y'},{id:'y',kind:'topic',parentId:'x'}],[],[{id:'p',topicIds:['x']}]).members.get('y').size,1);
+console.log('Topic matching, explicit memberships, ancestors, unmatched, empty and cycle checks passed.');

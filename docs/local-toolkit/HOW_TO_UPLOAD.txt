@@ -1,0 +1,11 @@
+ResearchStarterKit README 文档包
+
+1. 解压 ZIP。
+2. 把 README.md、README_EN.md 和 docs 文件夹复制到真正的 Git 仓库根目录。
+   根据先前的终端输出，你的仓库根目录是：
+   D:\000_workwork\research-local
+3. 如果仓库已有 README.md，请先备份/比较，再决定是否覆盖。
+4. GitHub 会自动显示仓库根目录的 README.md。
+5. 提交并 Push。推荐在 GitHub Desktop 中勾选这几个文档后 Commit。
+6. 发布前务必根据真实项目源码，补全 docs/USAGE.md 和 USAGE_EN.md 中的安装依赖、启动命令、访问地址等信息。
+7. 不要把这个文档包里最外层的 ResearchStarterKit_README_Package 文件夹整体再套进仓库根目录，否则 GitHub 主页不会自动显示里面的 README.md。

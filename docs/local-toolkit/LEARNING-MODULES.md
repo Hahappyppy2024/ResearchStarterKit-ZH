@@ -1,0 +1,13 @@
+# Module learning notebooks and Daily Quiz
+
+Daily Quiz is the sleep-before task after all Daily Effort tasks and before DDL. Its former navigation shortcut is removed. Foundations hides its old daily interview section while retaining its records and the legacy exam in Daily Quiz's optional disclosure.
+
+Each editable module retains its existing notes, editable question/answer Flash Cards, and PPTX upload, rename, recoverable deletion, preview and text editing. Its notebook adds individually editable question/answer items, NLP/CV examples with inline code and attachments, and named LaTeX/plain-text formulas with explanations. Notebook edits use local drafts, delayed database saves and revision checks; removing an item offers undo. Formula source is saved as entered, without a LaTeX renderer.
+
+Attachments stay in ignored local-data/learning-files/module-assets. Images can be opened at full size. Code is served as plain text and is never executed. Uploads are limited to allowed formats and 8 MB each. Entries must be saved before their attachments are accepted.
+
+Users can test an individual module card locally or select one/all answered cards for today's Daily Quiz. Selected module cards continue on future due dates; an explicit empty selection skips that date. Paper enrollment remains controlled by its checkbox. Both sources use frozen daily snapshots, answer drafts and explicit self-assessment. A module card without an answer cannot be selected. Existing automatic interview grading remains available in the legacy disclosure.
+
+Spaced review uses successive intervals of 1, 3, 7, 14 and 30 days measured from each assessed date; a forgotten card resets to one day. Unfinished enrolled cards carry forward. One final self-assessment per date advances the schedule, so same-day edits cannot advance extra intervals. The current source content must match the snapshot before an old verdict counts toward mastery. Current known/review/untested counts cover all saved paper and module cards plus the active legacy interview bank. Removed cards are excluded. Known is the latest successful self-assessment, not permanent mastery. Statistics appear above paper-reading statistics.
+
+Validation: isolated browser QA verified creating a module, editing notebook questions, answers, code and formulas, uploading a code file, module card self-test, adding a card to Daily Quiz and persisting its submitted answer/self-assessment after reload. Python tests cover revision conflict, module separation, attachment format/path checks and daily snapshot isolation. No production learning entries were added during QA.

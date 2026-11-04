@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const source=fs.readFileSync('sites/mist-blue-lotus/app/web-shared/english-ui.js','utf8');
+const dictionary=JSON.parse(fs.readFileSync('sites/mist-blue-lotus/app/web-shared/english-ui.json','utf8'));
+const text=value=>({nodeType:3,nodeValue:value,parentElement:{closest:()=>false}});
+const label=text('我的研究桌面');const dynamic=text('荷塘主题');
+const input={nodeType:1,childNodes:[],value:'用户自己的笔记',getAttribute:k=>k==='placeholder'?'请选择课程':null,setAttribute(k,v){this[k]=v},matches:()=>true};
+const codeText={nodeType:3,nodeValue:'保存',parentElement:{closest:()=>true}};
+const body={nodeType:1,childNodes:[label,dynamic,input,codeText],matches:()=>false,getAttribute:()=>null};
+const document={documentElement:{},body,title:'我的研究桌面'};
+const context={document,MutationObserver:class{observe(){}disconnect(){}},fetch:async()=>({ok:true,json:async()=>dictionary}),console};
+vm.runInNewContext(source,context);await new Promise(resolve=>setImmediate(resolve));await new Promise(resolve=>setImmediate(resolve));
+assert.equal(document.documentElement.lang,'en');assert.match(label.nodeValue,/My Research Desktop/);assert.doesNotMatch(dynamic.nodeValue,/[\u3400-\u9fff]/);assert.equal(input.value,'用户自己的笔记');assert.match(input.placeholder,/select.*course/i);assert.equal(codeText.nodeValue,'保存');assert.ok(Object.keys(dictionary).length>7000);console.log('English labels, dynamic segmentation, input preservation and code protection: PASS');

@@ -1,0 +1,9 @@
+# Project papers and common required reading
+
+The Project Notebook's structured related-paper card allows adding a paper with title, authors, source URL, optional PDF URL and summary, or selecting an existing paper from the shared catalog. New records enter the same local catalog used by Required Reading. Exact-title matches are reused without overwriting authors or reading notes. Adding an existing project-paper pair merges roles and keeps one association; explicit relation edits use revision checks and replace the selected roles.
+
+Sixteen bilingual, predefined roles are grouped into research questions, methods/implementation, experiments/evaluation and evidence/ideas. Multiple roles may be selected. At least one role is required; “to be determined” is exclusive. All statements describe the paper's role in the project, not a verified citation relation between papers.
+
+Saving also adds the paper to today's Required Reading using the existing queue helper. The queue remains unique per paper/date and retains all associated project IDs and role-label summaries. Its reader URL opens the same paper and existing checklist. No PDF is downloaded. Existing free-text project paper notes are preserved in a legacy disclosure, not parsed into potentially incorrect citations.
+
+Project-paper associations live in the ignored shared study database. Project existence/archive status and relation values are validated before paper creation. Tests cover common catalog and queue membership, title reuse, reading-note preservation, multi-project roles, revisions and archived projects. Isolated browser QA verified creating a project and paper, selecting existing papers, merging and editing roles, persistence after reload, and the same paper appearing in Required Reading with its project/roles. Demo entries never enter production data.

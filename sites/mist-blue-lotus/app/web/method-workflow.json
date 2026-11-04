@@ -1,0 +1,194 @@
+[
+  {
+    "id": "research",
+    "label": "选题与研究问题",
+    "steps": [
+      {
+        "id": "context",
+        "label": "研究背景与应用场景",
+        "description": "明确对象、场景与研究价值。"
+      },
+      {
+        "id": "gap",
+        "label": "文献缺口与研究问题",
+        "description": "从已有证据中定位尚未解决的问题。"
+      },
+      {
+        "id": "hypothesis",
+        "label": "假设与可行性",
+        "description": "限定范围，设计最小验证与停止条件。"
+      }
+    ]
+  },
+  {
+    "id": "reading",
+    "label": "文献阅读与脉络",
+    "steps": [
+      {
+        "id": "search",
+        "label": "检索与筛选论文",
+        "description": "组织关键词，筛选相关文献。"
+      },
+      {
+        "id": "understand",
+        "label": "理解问题、方法与证据",
+        "description": "分层阅读，解释方法图与关键实验。"
+      },
+      {
+        "id": "compare",
+        "label": "对比阅读与脉络整理",
+        "description": "比较假设、方法和评价条件。"
+      },
+      {
+        "id": "overview",
+        "label": "阅读笔记与问题沉淀",
+        "description": "整理证据、未理解的问题与后续阅读。"
+      }
+    ]
+  },
+  {
+    "id": "foundations",
+    "label": "基础准备与复现",
+    "steps": [
+      {
+        "id": "concepts",
+        "label": "概念、公式与代码",
+        "description": "建立概念、数学和实现之间的联系。"
+      },
+      {
+        "id": "setup",
+        "label": "数据、环境与 Baseline",
+        "description": "核对版本、数据划分、指标与命令。"
+      },
+      {
+        "id": "reproduce",
+        "label": "最小复现与差异排查",
+        "description": "保留真实运行结果，分析复现差异。"
+      }
+    ]
+  },
+  {
+    "id": "experiments",
+    "label": "方法设计与实验",
+    "steps": [
+      {
+        "id": "design",
+        "label": "方法设计与研究假设",
+        "description": "说明设计动机、输入输出与适用条件。"
+      },
+      {
+        "id": "protocol",
+        "label": "实验方案与评价指标",
+        "description": "确定对照、数据、指标、预算与重复设置。"
+      },
+      {
+        "id": "ablation",
+        "label": "消融与对比实验",
+        "description": "用有控制的改动检验各项设计。"
+      },
+      {
+        "id": "analysis",
+        "label": "结果分析与失败案例",
+        "description": "区分观察、原因推测和已验证的解释。"
+      }
+    ]
+  },
+  {
+    "id": "writing",
+    "label": "论文写作",
+    "steps": [
+      {
+        "id": "overview",
+        "label": "论文大纲与贡献",
+        "description": "先组织问题、主张与证据，再安排章节。"
+      },
+      {
+        "id": "abstract",
+        "label": "标题与 Abstract 怎么写",
+        "description": "交代问题、方法、主要结果与意义。"
+      },
+      {
+        "id": "introduction",
+        "label": "Introduction 怎么写",
+        "description": "背景 → 已有工作 → 缺口 → 问题 → 思路与贡献。"
+      },
+      {
+        "id": "related-work",
+        "label": "Related Work 怎么写",
+        "description": "按问题和方法组织比较，明确本文位置。"
+      },
+      {
+        "id": "method",
+        "label": "Methodology 怎么写",
+        "description": "说明任务定义、假设、设计与实现细节。"
+      },
+      {
+        "id": "results",
+        "label": "Experiments 与 Results 怎么写",
+        "description": "解释设置、对照、主要结果与消融证据。"
+      },
+      {
+        "id": "discussion",
+        "label": "Discussion、局限与 Conclusion",
+        "description": "明确证据边界，回答研究问题并总结局限。"
+      },
+      {
+        "id": "figures",
+        "label": "图表、引用与修改",
+        "description": "检查图表信息、引用依据和段落逻辑。"
+      }
+    ]
+  },
+  {
+    "id": "presentation",
+    "label": "展示、投稿与复盘",
+    "steps": [
+      {
+        "id": "overview",
+        "label": "叙事与 Slides 设计",
+        "description": "围绕听众和核心结论组织每一页。"
+      },
+      {
+        "id": "rehearsal",
+        "label": "演讲排练与答辩问答",
+        "description": "计时排练，准备难点和备份页。"
+      },
+      {
+        "id": "submission",
+        "label": "投稿与审稿回复",
+        "description": "检查投稿要求，逐条回应审稿意见。"
+      },
+      {
+        "id": "review",
+        "label": "研究复盘与下一步",
+        "description": "整理完成的证据、遗留问题与后续行动。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal",
+    "label": "期刊与论文 Rebuttal / 返修",
+    "steps": [
+      {
+        "id": "overview",
+        "label": "回应与返修总指南",
+        "description": "整理审稿意见、证据、逐条回应与论文修改；具体要求以本次投稿通知为准。"
+      },
+      {
+        "id": "conference",
+        "label": "会议论文 Rebuttal",
+        "description": "核对回应窗口和权限，围绕核心疑虑提供直接回答与可核对证据。"
+      },
+      {
+        "id": "journal",
+        "label": "期刊论文返修",
+        "description": "组织逐条回复、修改稿与标记稿，核对修改位置及证据一致性。"
+      },
+      {
+        "id": "check",
+        "label": "提交前复核",
+        "description": "检查回应完整性、真实结果、版本、格式与提交记录。"
+      }
+    ]
+  }
+]

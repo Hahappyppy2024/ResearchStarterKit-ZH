@@ -1,0 +1,166 @@
+{
+  "checkedAt": "2026-10-21",
+  "note": "主会常规投稿；不含 workshop、special track 或 camera-ready。时间按官网时区解释，同时显示北京时间。待确认不表示会议一定尚未发布，仅表示本次未确认到官方投稿日期。",
+  "conferences": [
+    {
+      "name": "CVPR",
+      "year": 2027,
+      "source": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "stages": [
+        {
+          "label": "论文注册",
+          "at": "2026-11-10T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        },
+        {
+          "label": "全文投稿",
+          "at": "2026-11-16T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "AAAI",
+      "year": 2027,
+      "source": "https://aaai.org/conference/aaai/aaai-27/",
+      "stages": [
+        {
+          "label": "摘要提交",
+          "at": "2026-07-21T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        },
+        {
+          "label": "全文投稿",
+          "at": "2026-07-28T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "ICCV",
+      "year": 2027,
+      "source": "https://iccv.thecvf.com/Conferences/2027/Dates",
+      "stages": [],
+      "note": "已确认会议官网；本次未确认到主会投稿 DDL。",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "ECCV",
+      "year": null,
+      "source": "https://eccv.ecva.net/Conferences/2026/Dates",
+      "stages": [],
+      "note": "下一届投稿 DDL 待官网确认。上一届 ECCV 2026 全文截止为 2026-03-05 22:00 UTC，已截止。",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "NeurIPS",
+      "year": 2027,
+      "source": "https://neurips.cc/",
+      "stages": [],
+      "note": "本次未确认到 2027 主会投稿 DDL；链接为官方首页。",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "ICML",
+      "year": 2027,
+      "source": "https://icml.cc/",
+      "stages": [],
+      "note": "本次未确认到 2027 主会投稿 DDL；链接为官方首页。",
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "ICLR",
+      "year": 2027,
+      "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines",
+      "stages": [
+        {
+          "label": "摘要提交",
+          "at": "2026-09-18T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        },
+        {
+          "label": "全文投稿",
+          "at": "2026-09-25T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "checkedAt": "2026-10-21"
+    },
+    {
+      "name": "ICSE",
+      "year": 2027,
+      "source": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track",
+      "stages": [
+        {
+          "label": "摘要提交",
+          "at": "2026-06-23T23:59:59-12:00",
+          "zone": "AoE / UTC−12"
+        },
+        {
+          "label": "全文投稿",
+          "at": "2026-06-30T23:59:59-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "name": "FSE",
+      "year": 2027,
+      "source": "https://conf.researchr.org/track/fse-2027/fse-2027-papers",
+      "stages": [
+        {
+          "label": "全文投稿（延期后）",
+          "at": "2026-10-03T23:59:59-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "note": "官网 CFP 正文因 HotCRP 故障将截止延期至 10 月 3 日 AoE；页面底部日期表仍列 10 月 2 日，此处按正文延期通知。",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "name": "ASE",
+      "year": null,
+      "source": "https://conf.researchr.org/series/ase",
+      "stages": [],
+      "note": "下一届主会投稿日期尚未核实，暂不生成倒计时。",
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "name": "ISSTA",
+      "year": 2027,
+      "source": "https://conf.researchr.org/track/issta-2027/issta-2027-research-papers",
+      "stages": [
+        {
+          "label": "摘要提交",
+          "at": "2027-01-08T23:59:59-12:00",
+          "zone": "AoE / UTC−12"
+        },
+        {
+          "label": "全文投稿",
+          "at": "2027-01-11T23:59:59-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "name": "ACL",
+      "year": 2027,
+      "source": "https://2027.aclweb.org/calls/main/",
+      "deadlineLabel": "ARR 投稿",
+      "stages": [
+        {
+          "label": "ARR 投稿（长／短论文）",
+          "at": "2027-01-04T23:59:00-12:00",
+          "zone": "AoE / UTC−12"
+        }
+      ],
+      "note": "先投稿 ARR 并取得评审，再 commitment 至 ACL。ACL commitment 截止日期尚待公布；当前倒计时仅针对 ARR 投稿。",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "updatedAt": "2026-10-27"
+}

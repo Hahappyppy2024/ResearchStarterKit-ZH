@@ -1,0 +1,126 @@
+.daily-timeline{margin:18px 0 25px;--timeline-line:var(--theme-line,#d6e3ea)}.daily-time-axis{position:relative;margin:20px 0 25px 3px;isolation:isolate}.timeline-grid{position:absolute;inset:0;pointer-events:none}.timeline-grid-line{position:absolute;left:58px;right:0;border-top:1px dashed var(--timeline-line)}.timeline-grid-line.hour{border-top-style:solid}.timeline-grid-line span{position:absolute;right:calc(100% + 10px);top:-10px;font-size:11px;color:var(--theme-muted);white-space:nowrap}.timeline-drop-preview{position:absolute;left:65px;right:5px;pointer-events:none;background:var(--theme-soft);border:2px dashed var(--theme-accent);border-radius:8px;z-index:20;font-size:13px;font-weight:700;padding:5px;color:var(--theme-accent);box-sizing:border-box}.timeline-drop-preview[hidden]{display:none!important}
+#schedule .timeline-task{position:absolute!important;left:65px;right:4px;display:block!important;box-sizing:border-box;margin:0!important;padding:20px 12px 6px!important;border:1px solid var(--timeline-line);border-left:4px solid var(--theme-accent);border-radius:8px;min-height:0!important;background:var(--theme-soft,#e7f0f7);overflow:hidden;touch-action:none;cursor:grab;user-select:none}#schedule .timeline-task .task-time{position:absolute;top:5px;left:11px;font-size:11px;line-height:14px;padding:0}#schedule .timeline-task .task-duration{display:none}#schedule .timeline-task>.task-time+div{padding:0;margin:0}#schedule .timeline-task .task-title{font-size:13px;line-height:20px;padding-right:65px;min-height:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:grab}#schedule .timeline-task .task-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}#schedule .timeline-task .task-name .paper-title-en{display:none}#schedule .timeline-task .task-name .bilingual-paper-title{line-height:20px}#schedule .timeline-task>input{position:absolute;right:10px;top:6px;width:16px;height:16px;margin:0}#schedule .timeline-task .task-marker{display:none}#schedule .timeline-task .task-badge{font-size:9px}#schedule .timeline-task .timeline-task-more{position:absolute;right:7px;bottom:6px;font-size:10px;padding:1px 5px;border:0;background:transparent;color:var(--theme-accent)}#schedule .timeline-short{padding:0 10px!important}#schedule .timeline-short .task-time{display:none}#schedule .timeline-short .task-title{font-size:11px;line-height:19px}#schedule .timeline-short .timeline-task-more{bottom:0}#schedule .timeline-short>input{top:2px;width:14px;height:14px}.timeline-resize{position:absolute;left:0;right:0;width:100%;height:7px;min-height:0;border:0!important;padding:0!important;background:transparent;cursor:ns-resize;touch-action:none;border-radius:0!important;z-index:3}.timeline-resize-start{top:0}.timeline-resize-end{bottom:0}.timeline-resize:hover,.timeline-resize:focus-visible{background:var(--theme-accent);opacity:.55}.timeline-task.timeline-dragging{z-index:30;opacity:.9;box-shadow:0 8px 24px #15344a30;cursor:grabbing!important}.timeline-todo{cursor:grab}.timeline-todo-dragging{opacity:.45}.timeline-todo>.todo-item-actions:before{content:'⠿';margin-right:4px;color:var(--theme-muted)}.timeline-placement .timeline-task{cursor:crosshair!important}.timeline-placement-notice{padding:10px;background:var(--theme-soft);font-size:12px;border:1px solid var(--theme-line);border-radius:8px}.timeline-placement-notice button{margin-left:10px}.timeline-task-dialog{width:min(750px,92vw);max-height:85vh;overflow:auto;border:1px solid var(--theme-line);border-radius:16px;background:var(--theme-paper,#fff);color:var(--theme-ink);padding:24px}.timeline-task-dialog::backdrop{background:#183f5d55}.timeline-task-dialog h2{font-size:19px;margin:0}.timeline-task-dialog .task-details{white-space:pre-wrap;font-size:13px}.timeline-task-dialog .schedule-item-actions{display:flex;gap:14px}.timeline-task-dialog .subtasks{margin-top:15px}.timeline-task-dialog .paper-progress-controls{margin:12px 0}#schedule .timeline-outside{position:static!important;height:auto!important;margin:12px 0!important}.timeline-dialogs:empty{display:none}#todo-form>.todo-time-fields{display:none}
+
+#schedule .timeline-nest-target{outline:3px solid var(--theme-accent);outline-offset:2px}.timeline-completion{display:flex;align-items:center;gap:8px;font-size:13px;margin:16px 0}.timeline-completion input{width:17px;height:17px}.timeline-subtasks-summary{position:absolute;bottom:5px;left:9px;font-size:10px;padding:1px 5px;border:0;background:transparent;color:var(--theme-accent)}.timeline-resize:after{content:"";position:absolute;left:calc(50% - 13px);top:2px;width:26px;height:2px;border-radius:2px;background:var(--theme-accent);opacity:.3}
+
+/* Keep paper actions on one horizontal row, including in narrow Todo panels. */
+.todo-item-actions,.schedule-item-actions,.subtask-tools{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;overflow-x:auto;margin:9px 0;padding:3px 0 7px;white-space:nowrap;font-size:11px;min-width:0}
+.todo-item-actions>* ,.schedule-item-actions>* ,.subtask-tools>*{flex:none}
+.todo-item-actions button,.schedule-item-actions button,.subtask-tools button{white-space:nowrap;font-size:11px;border:0;background:transparent;color:var(--theme-accent);padding:2px 0}
+.todo-item-actions .paper-progress-controls,.schedule-item-actions .paper-progress-controls,.subtask-tools .paper-progress-controls{display:inline-flex;flex-wrap:nowrap;margin:0;gap:0;font-size:11px}
+.todo-item-actions .paper-progress-controls small:empty,.schedule-item-actions .paper-progress-controls small:empty,.subtask-tools .paper-progress-controls small:empty{display:none}
+.todo-item-actions .paper-progress-controls label,.schedule-item-actions .paper-progress-controls label{white-space:nowrap;align-items:center}
+.subtask-branch{margin-top:7px;min-width:0}.subtask-children{margin:7px 0 0 13px;padding-left:12px;border-left:1px solid var(--theme-line)}
+.subtask-row{border:1px solid transparent;padding:3px 5px;border-radius:6px;cursor:grab;align-items:flex-start;user-select:none}
+.subtasks .subtask-name{flex:1;min-width:0;text-align:left;white-space:normal;font-size:12px;line-height:1.5;padding:0;color:var(--theme-ink)}
+.subtask-grip{flex:none;opacity:.6;cursor:grab}.subtask-detail{white-space:pre-wrap;margin:3px 0 4px 23px;overflow-wrap:anywhere;font-size:11px}
+.subtask-drop-target{outline:2px dashed var(--theme-accent)!important;outline-offset:1px;background:var(--theme-paper)!important}
+#schedule .timeline-inline-subtasks{position:absolute;top:45px;bottom:25px;left:11px;right:10px;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;cursor:default;user-select:text;margin:0;padding:0 5px 0 0;font-size:11px}
+#schedule .timeline-inline-subtasks>.subtask-tree>.subtask-branch:first-child{margin-top:3px}
+#schedule .timeline-inline-subtasks>.subtask-tree{padding-bottom:4px}
+#schedule .timeline-inline-subtasks>.subtask-tree-compact{margin:0}
+#schedule .timeline-inline-subtasks>.subtask-tree .subtask-row{margin-top:0}
+#schedule .timeline-inline-subtasks .subtask-name{font-size:12px;line-height:1.5}
+#schedule .timeline-inline-subtasks .paper-title-en{display:block;font-size:10px;font-weight:400;opacity:.75}
+#schedule .timeline-inline-subtasks .subtask-detail{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5}
+#schedule .timeline-inline-subtasks .subtask-children{padding-left:9px;margin-left:8px}
+#schedule .timeline-short .timeline-inline-subtasks{display:none}
+
+.subtask-time{display:block;font-size:10px;color:var(--theme-muted);margin:2px 0 4px 24px;line-height:1.5}.subtask-time-overflow{color:#ab5b30}
+#schedule .timeline-inline-subtasks .paper-progress-controls{margin:0;gap:0;flex:none;font-size:10px}
+#schedule .timeline-inline-subtasks .paper-progress-controls label{gap:4px}
+#schedule .timeline-inline-subtasks .paper-progress-controls small:empty{display:none}
+#schedule .timeline-inline-subtasks input[type=checkbox]{appearance:auto;width:15px;height:15px;flex:none;margin:2px 0 0}
+#schedule .timeline-inline-subtasks .subtask-row{align-items:flex-start;gap:7px}
+#schedule .timeline-task.timeline-short{min-height:20px!important}
+
+/* Pair each planned time directly with its full task content. */
+.subtask-row{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;align-items:start}
+.subtask-slot{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}.subtask-slot .subtask-time{margin:0;font-size:11px;white-space:nowrap}.subtask-heading{display:flex;gap:6px;align-items:flex-start;min-width:0}.subtask-content{min-width:0}.subtask-content .subtask-detail{margin:4px 0 0 18px;line-height:1.6;white-space:pre-wrap}
+#schedule .timeline-inline-subtasks .subtask-row{display:grid;grid-template-columns:92px minmax(0,1fr);padding:8px;gap:12px;background:var(--theme-paper,#fff);border:1px solid var(--theme-line);border-radius:7px}
+#schedule .timeline-inline-subtasks .subtask-detail{display:block;overflow:visible;-webkit-line-clamp:unset;line-height:1.6}
+#schedule .timeline-inline-subtasks .subtask-name{white-space:normal;text-overflow:clip;overflow:visible;line-height:1.5;font-weight:500}
+#schedule .timeline-inline-subtasks .subtask-time{font-size:11px;color:var(--theme-accent);margin:0}
+#schedule .timeline-inline-subtasks .subtask-time-overflow{color:#ab5b30}
+.subtask-tools{margin-left:0}
+@media(max-width:600px){#schedule .timeline-inline-subtasks .subtask-row,.subtask-row{grid-template-columns:72px minmax(0,1fr);gap:7px;padding:5px}.subtask-slot .subtask-time{font-size:9px}}
+
+.subtask-drag-preview{position:fixed;z-index:99999;max-width:330px;pointer-events:none;padding:8px 12px;background:var(--theme-paper,#fff);color:var(--theme-ink);border:1px solid var(--theme-accent);border-radius:8px;box-shadow:0 6px 20px #183f5d33;font-size:12px}
+#schedule .timeline-task>.timeline-parent-check{appearance:auto;-webkit-appearance:checkbox;position:absolute;right:10px;top:9px;width:17px;height:17px;margin:0;z-index:4;accent-color:var(--theme-accent);cursor:pointer}#schedule .timeline-task>.timeline-parent-check:after{content:none}
+#schedule .timeline-inline-subtasks .subtask-row{position:relative;padding-bottom:14px;box-sizing:border-box}
+.subtask-resize{position:absolute;bottom:0;left:0;right:0;width:100%;height:8px;min-height:0;padding:0!important;border:0!important;background:transparent!important;cursor:ns-resize;touch-action:none;font-size:9px!important;line-height:8px!important;z-index:4}
+.subtask-resize:after{content:'';position:absolute;left:calc(50% - 12px);top:3px;width:24px;height:2px;background:var(--theme-accent);opacity:.35;border-radius:2px}
+.subtask-resize:hover:after{opacity:1}.subtask-spent{font-size:10px;line-height:1.5;color:var(--theme-muted)}.subtask-grip{touch-action:none}
+
+/* Precise mode: every child boundary shares the outer timeline's pixel scale. */
+.timeline-zoom{display:flex;gap:14px;align-items:center;justify-content:flex-end;font-size:11px;margin:8px 0;color:var(--theme-muted)}.timeline-zoom button{border:1px solid var(--theme-line);border-radius:6px;background:var(--theme-paper);color:var(--theme-accent);padding:4px 8px;font:inherit}.timeline-zoom button:disabled{opacity:.4}
+#schedule .timeline-has-subtasks{padding:23px 8px 8px!important}
+#schedule .timeline-has-subtasks>.task-time+div{width:145px}
+#schedule .timeline-has-subtasks .task-title{white-space:normal;padding-right:0;line-height:1.6}
+#schedule .timeline-has-subtasks .task-name{white-space:normal;overflow:visible;text-overflow:clip}
+.timeline-child-count{font-size:10px;color:var(--theme-muted);margin-top:10px}
+#schedule .timeline-inline-subtasks{top:0;bottom:0;left:170px;right:32px;padding:0;margin:0;overflow:auto;scrollbar-gutter:stable}
+#schedule .timeline-inline-subtasks>.subtask-tree{position:relative;height:100%;min-width:270px;padding:0}
+#schedule .timeline-inline-subtasks .timed-subtask-branch{position:absolute;left:0;right:0;margin:0;padding:0;box-sizing:border-box}
+#schedule .timeline-inline-subtasks .timed-subtask-branch>.subtask-row{position:absolute;left:0;right:0;top:0;margin:0;border-radius:6px;overflow:auto;padding:8px 8px 12px;min-height:0!important;box-sizing:border-box;scrollbar-width:thin}
+#schedule .timeline-inline-subtasks .timed-subtask-group>.subtask-row{right:auto;width:145px;display:flex;flex-direction:column;gap:5px}
+#schedule .timeline-inline-subtasks .timed-subtask-group>.subtask-children{position:absolute;left:155px;right:0;top:0;height:100%;margin:0;padding:0;border:0;min-width:230px}
+#schedule .timeline-inline-subtasks .subtask-name{font-size:11px}
+#schedule .timeline-inline-subtasks .paper-title-en{font-size:10px}
+#schedule .timeline-task.timeline-short .timeline-inline-subtasks{display:block}
+#schedule .timeline-has-subtasks.timeline-short>.task-time+div{width:145px}
+#schedule .timeline-parent-paper-check{position:absolute;right:10px;top:9px;z-index:4}
+#schedule .timeline-parent-paper-check .paper-progress-controls{margin:0;gap:0}
+#schedule .timeline-parent-paper-check label>span,#schedule .timeline-parent-paper-check small:empty{display:none}
+#schedule .timeline-parent-paper-check input{appearance:auto;width:17px;height:17px;margin:0;accent-color:var(--theme-accent)}
+@media(max-width:850px){.daily-time-axis{min-width:710px}#schedule{overflow-x:auto}.timeline-inline-subtasks .subtask-row{grid-template-columns:78px minmax(0,1fr)}}
+
+#schedule .timeline-inline-subtasks>.subtask-tree>.timed-subtask-branch:first-child{margin-top:0}
+
+#schedule .subtask-slot .paper-progress-controls{flex-direction:column;align-items:flex-start;gap:4px}
+#schedule .subtask-slot .paper-progress-controls>button{padding:0;font-size:10px;line-height:1.5;text-align:left;white-space:normal}
+
+#schedule .timeline-paper-count{margin-top:4px;font-size:10px}#schedule .timeline-paper-count .paper-progress-controls{margin:0;gap:0}#schedule .timeline-paper-count button{font-size:10px;border:0;background:transparent;color:var(--theme-accent);padding:0}#schedule .timeline-paper-count small:empty{display:none}
+#schedule .timeline-task:not(.timeline-has-subtasks) .task-title,#schedule .timeline-task:not(.timeline-has-subtasks) .task-name{white-space:normal;line-height:1.5}
+
+/* Content-first schedule: stretch only groups, and put descendants inside their own card. */
+.timeline-content-note{font-size:11px;color:var(--theme-muted);text-align:right;margin:8px 0}
+#schedule .adaptive-time-axis .timeline-has-subtasks{padding:23px 10px 8px!important}
+#schedule .adaptive-time-axis .timeline-has-subtasks>.task-time+div{width:auto;padding-right:28px}
+#schedule .adaptive-time-axis .timeline-has-subtasks .task-title{white-space:normal;line-height:1.5}
+#schedule .adaptive-time-axis .timeline-inline-subtasks{top:63px;bottom:auto;left:11px;right:11px;overflow:visible;padding:0;scrollbar-gutter:auto}
+#schedule .adaptive-time-axis .timeline-inline-subtasks>.subtask-tree{position:static;height:auto;min-width:0}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-branch{position:relative;left:auto;right:auto;top:auto;height:auto;margin:7px 0 0;padding:0 0 12px;border:1px solid var(--theme-line);border-radius:8px;background:var(--theme-paper,#fff);box-sizing:border-box;overflow:visible}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-row{position:relative;left:auto;right:auto;top:auto;height:auto;min-height:0;width:auto;display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;border:0;margin:0;padding:9px;background:transparent;overflow:visible}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children{position:static;left:auto;right:auto;top:auto;height:auto;min-width:0;margin:6px 9px 0 25px;padding:8px;border:1px solid var(--theme-line);border-radius:8px;background:var(--theme-soft,#e6f0f7)}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children .subtask-branch{background:#f2f8f0;border-color:#c8ddc2}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children .subtask-children{background:#fbf4e9;border-color:#ead9bb}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children .subtask-children .subtask-branch{background:#fffaf1;border-color:#ead9bb}
+#schedule .adaptive-time-axis .timeline-child-count{font-size:10px;margin-top:4px}
+.timeline-grid-line[hidden]{display:none}
+
+#schedule .timeline-short .timeline-paper-count{position:absolute;right:35px;top:1px;margin:0;line-height:18px}#schedule .timeline-short .timeline-paper-count button{white-space:nowrap;font-size:10px}#schedule .timeline-short .task-title{padding-right:135px!important;white-space:nowrap!important}#schedule .timeline-short .task-name{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+
+@media(min-width:1101px){#daily.content-grid{grid-template-columns:minmax(0,1fr) minmax(410px,450px)}}
+@media(min-width:851px) and (max-width:1100px){#daily.content-grid{grid-template-columns:minmax(0,1fr) 380px}}
+.paper-title-progress{display:inline-flex;vertical-align:middle;margin-left:8px;font-size:10px;color:var(--theme-muted)}.paper-title-progress .paper-progress-controls{display:inline-flex!important;flex-wrap:nowrap!important;margin:0!important;gap:0!important}.paper-title-progress .paper-progress-controls>button{border:0!important;background:transparent!important;color:var(--theme-muted);padding:0!important;font-size:10px!important;white-space:nowrap}.paper-title-progress small:empty{display:none}
+.todo-item>label>span{min-width:0}.todo-item>label>span>.paper-title-progress{display:inline-flex;margin:4px 0}.todo-item small[hidden]{display:none}
+.timeline-todo>.todo-item-actions:before{display:none}.todo-drag-grip{cursor:grab;touch-action:none;font-size:16px;color:var(--theme-muted);padding:0 3px;user-select:none}
+#schedule .timeline-paper-count{display:inline-flex!important;position:static!important;margin:0 0 0 8px!important;flex:none}#schedule .timeline-paper-count .paper-progress-controls{margin:0!important}
+#schedule .task-title:has(.timeline-paper-count){display:flex;align-items:center;gap:6px;padding-right:28px!important}#schedule .task-title:has(.timeline-paper-count) .task-name{min-width:0;flex:1}
+#schedule .timeline-short .task-title:has(.timeline-paper-count){padding-right:30px!important}
+#schedule .subtask-heading{flex-wrap:wrap}#schedule .subtask-heading>.subtask-name{flex:1;min-width:140px}#schedule .subtask-heading>.paper-title-progress{flex:none;align-self:flex-start;margin-top:1px}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children>.subtask-branch{background:#edf6ef!important;border-color:#bad6c2!important}
+#schedule .adaptive-time-axis .timeline-inline-subtasks .subtask-children .subtask-children>.subtask-branch{background:#fff5e8!important;border-color:#e6cfaa!important}
+
+.timeline-resize:after,.subtask-resize:after{display:none}.timeline-resize:hover{background:transparent;opacity:1}
+
+
+#todo-panel.timeline-return-target{outline:3px dashed var(--theme-accent);outline-offset:4px;background:var(--theme-soft)!important}
+
+#schedule>.timeline-content-note{display:none}.schedule-manage{margin:18px 0 12px;gap:12px}.schedule-settings{position:relative;flex:none;font-size:12px;z-index:20}.schedule-settings>summary{list-style:none;display:flex;align-items:center;gap:16px;border:1px solid var(--theme-line,#d5e1eb);background:var(--theme-paper,#fff);border-radius:8px;padding:8px 12px;color:var(--theme-accent);cursor:pointer}.schedule-settings>summary::-webkit-details-marker{display:none}.schedule-settings[open]>summary{background:var(--theme-soft)}.schedule-settings-menu{position:absolute;right:0;top:calc(100% + 8px);width:310px;max-width:80vw;box-sizing:border-box;padding:10px;border:1px solid var(--theme-line,#d5e1eb);border-radius:12px;background:var(--theme-paper,#fff);box-shadow:0 12px 35px #183f5d24}.schedule-settings-menu>p{margin:5px 8px 10px;font-size:11px;color:var(--theme-muted)}.schedule-settings-menu>button{display:block;width:100%;text-align:left;border:0;border-radius:8px;padding:12px;background:transparent;color:var(--theme-ink);white-space:normal}.schedule-settings-menu>button:hover:not(:disabled){background:var(--theme-soft)}.schedule-settings-menu strong{display:block;font-size:13px;font-weight:600}.schedule-settings-menu small{display:block;margin-top:5px;color:var(--theme-muted);font-size:11px;line-height:1.7}.schedule-settings-menu .schedule-settings-hint{border-top:1px solid var(--theme-line);padding-top:10px;margin-top:8px;line-height:1.7}.schedule-recovery{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.schedule-recovery:empty{display:none}.schedule-recovery>span{display:inline-flex;gap:14px;align-items:center;border-radius:8px;padding:7px 12px;background:var(--theme-soft);font-size:11px;color:var(--theme-muted)}.schedule-recovery button{padding:0;border:0;background:transparent;font-size:11px;color:var(--theme-accent);font-weight:600}.schedule-manage>span{font-size:11px;line-height:1.8}@media(max-width:600px){.schedule-manage{align-items:flex-start}.schedule-settings-menu{width:280px}}
+.schedule-recovery>[hidden]{display:none!important}.schedule-recovery:not(:has(>span:not([hidden]))){display:none}
+
+.schedule-settings{margin-left:auto}.schedule-settings-menu>div>button{display:block;width:100%;text-align:left;border:0;background:transparent;color:var(--theme-accent);padding:10px 12px;font-size:12px}.schedule-settings-menu>div>button:hover{background:var(--theme-soft)}.schedule-settings-menu>div[hidden]{display:none!important}
+
+.template-manager{width:min(1000px,94vw);max-height:88vh;overflow:auto;padding:24px;border:1px solid var(--theme-line);border-radius:15px;background:var(--theme-paper,#fff);color:var(--theme-ink)}.template-manager::backdrop{background:#183f5d66}.template-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}.template-manager label{display:block;font-size:13px;margin:12px 0}.template-manager input,.template-manager select{box-sizing:border-box;padding:9px;border:1px solid var(--theme-line);border-radius:7px;background:var(--theme-paper);color:var(--theme-ink);font:inherit;min-width:0}.template-manager label>input,.template-manager label>select{width:100%;display:block;margin-top:6px}.template-manager button{padding:8px 12px;border:1px solid var(--theme-line);border-radius:7px;background:var(--theme-paper);color:var(--theme-accent);font:inherit;cursor:pointer}.template-manager .actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.template-task-list{margin:16px 0}.template-task-row{display:grid;grid-template-columns:minmax(150px,1fr) 125px 15px 125px 65px;gap:8px;align-items:center;margin:9px 0}.template-manager .template-rules{border-top:1px solid var(--theme-line);margin-top:24px;padding-top:15px}.template-rules>label{display:inline-block;width:calc(50% - 12px);margin-right:12px}.template-week{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.template-date-rule{display:flex;gap:14px;align-items:center;margin:8px 0;font-size:13px}.template-manager [role=status]{color:#a34732}.template-manager .primary{background:var(--theme-accent);color:white}.template-manager>form>label>input{width:100%}@media(max-width:650px){.template-task-row{grid-template-columns:1fr 1fr;gap:6px;border-bottom:1px solid var(--theme-line);padding-bottom:12px}.template-task-row>input:first-child{grid-column:1/-1}.template-task-row>span{display:none}.template-week{grid-template-columns:1fr 1fr}.template-rules>label{width:100%}}

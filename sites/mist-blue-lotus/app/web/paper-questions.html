@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>已读论文问题</title><link rel="stylesheet" href="study-workspace.css"><link rel="stylesheet" href="research-desk.css"><link rel="stylesheet" href="paper-reader.css"><link rel="stylesheet" href="paper-questions.css"><script type="module" src="paper-questions.js"></script></head>
+<body class="research-desk-page questions-desk"><main>
+<header class="desk-heading"><div><h1>已读论文问题</h1><p>一个问题，一篇笔记；保留对应论文和记录日期。</p></div><a class="button" href="reading.html">返回今日必读</a></header>
+<div class="blog-desk questions-layout">
+<aside class="desk-panel desk-tree"><div class="desk-panel-title"><h2>笔记结构</h2><small id="question-tree-count"></small></div><input id="question-search" aria-label="搜索论文问题" placeholder="搜索论文、问题、答案"><nav id="question-tree" aria-label="论文问题笔记结构"></nav></aside>
+<section class="desk-panel desk-editor question-editor"><div class="desk-panel-title"><h2>问题笔记</h2><button id="question-refresh" type="button">刷新记录</button></div><p id="question-statistics" class="desk-status" role="status"></p><div id="question-content"></div></section>
+<aside class="desk-panel desk-timeline"><div class="desk-panel-title"><h2>论文时间线</h2><small id="question-paper-count"></small></div><label>记录日期<input id="question-date" type="date"></label><div class="actions"><button id="all-question-dates" type="button">全部日期</button><select id="question-state" aria-label="问题状态"><option value="all">全部问题</option><option value="open">未解决</option><option value="resolved">已解决</option></select></div><p id="question-scope" class="desk-status"></p><div id="question-timeline"></div></aside>
+</div></main></body></html>
