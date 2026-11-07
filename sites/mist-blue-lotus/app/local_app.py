@@ -266,6 +266,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
         import theme_assets
         shared=theme_assets.asset(path.path)
         if shared:return self.reply(shared[0],kind=shared[1])
+        if path.path=='/api/study/memos':
+            import memo_service
+            return self.reply(memo_service.listing())
         if path.path.startswith("/api/study/"):
             try:
                 import study_service as study
@@ -508,6 +511,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 import study_service as study
                 action=self.path.rsplit("/",1)[-1]
                 if action=='paper-scope-restore':return self.reply(paper_scope.restore(body))
+                if action=='memo':
+                    import memo_service
+                    return self.reply(memo_service.save(body))
                 if action=='course-category':return self.reply(study.save_course_category(body))
                 if action=='paper-affiliations':
                     import paper_affiliations
